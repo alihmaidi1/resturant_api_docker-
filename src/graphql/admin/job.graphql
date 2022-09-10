@@ -1,0 +1,10 @@
+type Job{
+
+    id:ID
+    name:String
+    salary:Int
+    currency:Currency @belongsTo
+    employees:[Employee] @hasMany
+
+
+}

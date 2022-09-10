@@ -1,0 +1,52 @@
+
+extend type Query{
+
+    getalladmin:[Admin!] @all @guard
+    getpermission:PermissionArray @guard
+    me:Admin @guard
+}
+
+extend type Mutation{
+
+    login(email:String,password:String):Admin!   @validator
+    token(your_refresh_token: String!): Token!
+    resetemail(email:String):String @validator
+    logout:Admin @guard
+    createadmin(name:String,email:String,password:String,role_id:ID,employee_id:ID):Admin @guard @validator
+    deleteadmin(id:ID):Admin @guard @validator
+    admininfo(id:ID):Admin @guard @validator
+    changepassword(id:ID,password:String):Admin @validator
+}
+
+
+
+type Admin{
+    id:ID
+    message:String
+    token_info:Token
+    email:String
+    employee:Employee @belongsTo
+    role:Role @belongsTo
+}
+
+
+type Token{
+    access_token:String
+    token_type:String
+    expires_in:String
+    refresh_token:String
+}
+
+type Permssion{
+
+    category: String
+
+}
+
+type PermissionArray{
+
+    key:[String]
+    value:[String]
+
+
+}

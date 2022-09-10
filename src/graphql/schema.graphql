@@ -1,0 +1,3 @@
+scalar JSON @scalar(class: "MLL\\GraphQLScalars\\JSON")
+
+#import admin/*.graphql

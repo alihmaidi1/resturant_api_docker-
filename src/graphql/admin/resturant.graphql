@@ -1,0 +1,9 @@
+
+type Resturant{
+
+    id:ID
+    address:String
+    name:String
+    employees:Employee @hasMany
+
+}

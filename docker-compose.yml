@@ -1,0 +1,50 @@
+version: '3'
+
+networks:
+  laravel:
+    driver: bridge
+services:
+
+
+  mysql:
+    image: mysql:8
+    container_name: mysql_container
+    ports:
+      - 3306:3306
+    
+    networks:
+      - laravel
+    volumes: 
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ali450892
+      MYSQL_DATABASE: resturant
+      MYSQL_SERVICE_TAGS: dev
+      MYSQL_SERVICE_NAME: mysql
+    restart: always
+
+  app:
+
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 9000:9000
+    networks:
+      - laravel
+    volumes:
+      - ./src:/var/www/html
+    container_name: php_container
+  app2:
+
+    build:
+      context: .
+      dockerfile: dockerfile1
+    ports:
+      - 9001:9001
+    networks:
+      - laravel
+    restart: always
+    volumes:
+      - ./src:/var/www/html
+    container_name: php_container2

@@ -1,0 +1,11 @@
+type Currency{
+
+    id:ID
+    code:String
+    name:String
+    is_default_for_website:String
+    precent_value_in_dular:String
+    jobs:Job @hasMany
+
+
+}

@@ -1,0 +1,9 @@
+type Experience{
+
+    id:ID
+    year:String
+    benifit:Int
+    vacation:Int
+    employees:[Employee] @hasMany
+
+}

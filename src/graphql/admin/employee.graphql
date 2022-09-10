@@ -1,0 +1,18 @@
+type Employee{
+
+    id:ID
+    name:String
+    email:String
+    phone:String
+    address:String
+    date_of_birth:String
+    is_empty:String
+    vacation_token:Int
+    gender:String
+    resturant:Resturant @belongsTo
+    manager: Employee @belongsTo
+    employees: [Employee] @hasMany
+    job:Job @belongsTo
+    experience:Experience @belongsTo
+    admin:Admin @hasOne
+}
