@@ -1,4 +1,4 @@
-# Getting Start
+# Getting Starting ...
 
 * ### first step is 
 you should make database with correct port as like as env file
