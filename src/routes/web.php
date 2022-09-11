@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cache;
-use App\Models\oauth_clients;
-use App\Models\resturant;
+use Illuminate\Support\Facades\Redis;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,10 @@ use App\Models\resturant;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    Cache::set("name","ali");
+    return Cache::get("name");
+
 });
 
 

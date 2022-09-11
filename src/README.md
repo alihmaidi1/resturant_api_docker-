@@ -1,32 +1,19 @@
-# Getting Start...
+# Getting Starting ...
 
-* ### first step run 
+* ### first step is 
+you should make database with correct port as like as env file
+___
+* ### second step run this command
 ```
-composer install --ignore-platform-reqs
+docker-compose build
 ```
-_________
-* ### second step connect to your database and run this command
+___
+* ### third step after done the last command  you shuold run 
 ```
-php artisan migrate
+docker-compose up -d
 ```
-_______
-* ### third step run
-```
-php artisan db:seed
-```
-_______
-* ### fourth step run and choose admin
-```
-php artisan passport:client --password
-```
-_______
+Important Notice : make sure that command the contianer is done before run the project :) :) :)
+ 
 
-* ### fivth step run
-```
-php artisan key:generate
-```
 
-* ### sixth step run
-```
-php artisan passport:install
-```
+ 
