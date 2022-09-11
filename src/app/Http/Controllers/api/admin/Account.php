@@ -31,11 +31,11 @@ class Account extends Controller
 
 
 
-    public function changepassword(changepasswordRequest $request,$base_url){
+    public function changepassword(changepasswordRequest $request,$token){
         try{
 
         $admin=auth("reset_password")->user();
-            return redirect(env("front_base_url")."/reset-password/$admin->id");
+            return redirect(env("front_base_url")."/reset-password/$token");
 
         }catch(\Exception $ex){
 
