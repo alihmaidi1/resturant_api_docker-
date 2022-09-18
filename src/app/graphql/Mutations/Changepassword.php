@@ -16,7 +16,7 @@ final class Changepassword
     public function __invoke($_, array $args)
     {
 
-        $admin=admin::find($args["id"]);
+        $admin=auth('reset_password')->user();
         $admin->password=Hash::make($args["password"]);
         $admin->save();
         $admin->role;
@@ -24,6 +24,7 @@ final class Changepassword
         $admin->message=trans("admin.the password was updated successfully");
         $token=$this->tokenInfo($admin->email,$args['password']);
         $admin->token_info=$token->json();
+        auth('reset_password')->logout();
         return $admin;
 
     }

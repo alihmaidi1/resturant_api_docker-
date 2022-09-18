@@ -59,6 +59,16 @@ return [
     "the code is good"=>"the code is good",
     "base url is required"=>"base url is required",
     "base url shuold be url"=>"base url shuold be url",
+    "token field is required"=>"token field is required",
+    "the address is required"=>"the address is required",
+    "the address should be string"=>"the address should be string",
+    "the name is required"=>"the name is required",
+    "the name should be string"=>"the name should be string",
+    "id is required"=>"id is required",
+    "id is not exists in our data"=>"id is not exists in our data",
+    "the resturant was updated successfully"=>"the resturant was updated successfully",
+    "the resturant was created successfully"=>"the resturant was created successfully",
+    "the resturant was deleted successfully"=>"the resturant was deleted successfully",
 
 
 

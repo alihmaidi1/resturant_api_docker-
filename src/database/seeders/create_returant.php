@@ -18,7 +18,7 @@ class create_returant extends Seeder
         resturant::create([
 
             "address"=>"syria,Aleppo",
-            "name"=>["en"=>"Cake","ar"=>"كعكة"]
+            "name"=>"A Star"
 
         ]);
 

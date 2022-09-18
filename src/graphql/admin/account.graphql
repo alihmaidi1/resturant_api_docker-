@@ -15,7 +15,7 @@ extend type Mutation{
     createadmin(name:String,email:String,password:String,role_id:ID,employee_id:ID):Admin @guard @validator
     deleteadmin(id:ID):Admin @guard @validator
     admininfo(id:ID):Admin @guard @validator
-    changepassword(id:ID,password:String):Admin @validator
+    changepassword(password:String):Admin @validator @guard(with:["reset_password"])
 }
 
 

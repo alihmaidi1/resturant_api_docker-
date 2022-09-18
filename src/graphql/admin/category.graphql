@@ -1,0 +1,23 @@
+extend type Mutation{
+
+    addcategory(name_ar:String,name_en:String,logo:Upload,description_ar:String,description_en:String,meta_title:String,keywords:String,status:String): String
+
+
+}
+
+
+
+
+type Category{
+
+
+    id: ID
+    name: String
+    logo: String
+    description: String
+    meta_title: String
+    meta_logo: String
+    keywords: String
+    status: String
+
+}

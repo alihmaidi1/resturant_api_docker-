@@ -59,6 +59,16 @@ return [
     "the code is good"=>"الكود صحيح",
     "base url is required"=>"رابط الموقع غير صحيح",
     "base url shuold be url"=>"حقل الرابط يجب أن يكون رابط موقعك الالكتروني",
+    "token field is required"=>"حقل التوكن مطلوب",
+    "the address is required"=>"حقل العنوان مطلوب",
+    "the address should be string"=>"حقل العنوان يجب أن ]كون نص",
+    "the name is required"=>"الاسم مطلوب",
+    "the name should be string"=>"الاسم يجب أن يكون حقل نصي",
+    "id is required"=>"المعرف مطلوب",
+    "id is not exists in our data"=>"المعرف غير موجود في بياناتنا",
+    "the resturant was updated successfully"=>"تم تعديل بيانات المطعم بنجاح",
+    "the resturant was created successfully"=>"تم انشاء المطعم بنجاح",
+    "the resturant was deleted successfully"=>"تم حذف المعطم بنجاح",
 
 
 

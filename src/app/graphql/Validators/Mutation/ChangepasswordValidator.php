@@ -15,7 +15,6 @@ final class ChangepasswordValidator extends Validator
     {
         return [
 
-            "id"=>["required","exists:admins,id"],
             "password"=>["required"]
 
         ];
@@ -27,8 +26,6 @@ final class ChangepasswordValidator extends Validator
 
         return [
 
-            "id.required"=>trans("admin.id field is required"),
-            "id.exists"=>trans("admin.your data not exists in our system"),
             "password"=>trans("admin.password field is required")
 
         ];
