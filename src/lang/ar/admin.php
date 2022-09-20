@@ -92,6 +92,21 @@ return [
     "the currency id is not exists in data"=>"معرف العملة غير موجود في بياناتنا",
     "the table type was updated successfully"=>"تم تعديل معلومات حجز الطاولة بنجاح",
     "the table type was deleted successfully"=>"تم حذف نوع الطاولة بنجاح",
+    "person number is required"=>"person number is required",
+    "the description in english is required"=>"الوصف باللغة الانكليزية مطلوب",
+    "the description in arabic is required"=>"الوصف باللغة العربية مطلوب",
+    "status is required"=>"الحالة مطلوبة",
+    "resturant id is required"=>"معرف المطعم مطلوب",
+    "resturant is not exists in our data"=>"هذا المطعم غير موجود في بياناتنا",
+    "table type is required"=>" نوع الطاولة مطلوب",
+    "table type is not exists in our data"=>"نوع الطاولة غير موجود في بياناتنا",
+    "the table was added successfully"=>"تم أضافة الطاولة بنجاح",
+    "the table was updated successfully"=>"تم تعديل بيانات الطاولة بنجاح",
+    "free"=>"متاح",
+    "busy"=>"مشغول",
+    "resturant id is required"=>"معرف المطعم مطلوب",
+    "resturant id is not exists in our data"=>"هذا المطعم غير موجود في بياناتنا",
+    "the table was deelted successfully"=>"تم ازالة الطاولة بنجاح",
 
 
 

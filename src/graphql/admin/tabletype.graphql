@@ -20,4 +20,5 @@ type tabletype{
     name: String
     currency: Currency @belongsTo
     message: String
+    tables: table @hasMany
 }

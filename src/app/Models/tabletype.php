@@ -20,4 +20,9 @@ class tabletype extends Model
 
     }
 
+
+    public function tables(){
+
+        return $this->hasMany("\App\Models\\table","type_id");
+    }
 }

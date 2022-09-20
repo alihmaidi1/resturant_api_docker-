@@ -19,6 +19,12 @@ class resturant extends Model
         return $this->hasMany("App\Models\\employee","resturant_id");
     }
 
+    public function tables(){
+
+
+        return $this->hasMany("\App\Models\\table","resturant_id");
+    }
+
 
 }
 

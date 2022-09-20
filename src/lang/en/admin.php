@@ -92,6 +92,23 @@ return [
     "the currency id is not exists in data"=>"the currency id is not exists in data",
     "the table type was updated successfully"=>"the table type was updated successfully",
     "the table type was deleted successfully"=>"the table type was deleted successfully",
+    "person number is required"=>"person number is required",
+    "the description in english is required"=>"the description in english is required",
+    "the description in arabic is required"=>"the description in arabic is required",
+    "status is required"=>"status is required",
+    "resturant id is required"=>"resturant id is required",
+    "resturant is not exists in our data"=>"resturant is not exists in our data",
+    "table type is required"=>"table type is required",
+    "table type is not exists in our data"=>"table type is not exists in our data",
+    "the table was added successfully"=>"the table was added successfully",
+    "the table was updated successfully"=>"the table was updated successfully",
+    "free"=>"free",
+    "busy"=>"busy",
+    "resturant id is required"=>"resturant id is required",
+    "resturant id is not exists in our data"=>"resturant id is not exists in our data",
+    "the table was deelted successfully"=>"the table was deelted successfully",
+
+
 
 
 

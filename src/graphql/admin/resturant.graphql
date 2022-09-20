@@ -21,6 +21,7 @@ type Resturant{
     name:String
     employees:Employee @hasMany
     message:String
+    tables: table @hasMany
 }
 
 
@@ -28,6 +29,7 @@ type Resturant_without_message{
 
     id:ID
     address:String
+    tables: table @hasMany
     name:String
     employees:Employee @hasMany
 }

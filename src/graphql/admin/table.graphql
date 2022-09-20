@@ -1,0 +1,22 @@
+extend type Mutation{
+
+    addtable(name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard
+    edittable(id:ID,name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard
+    gettableresturant(resturant_id:ID): [table] @validator @guard
+    deletetable(id:ID): table @validator @guard
+
+}
+
+type table{
+
+    id: ID
+    name: String
+    person_number: Int
+    status:String
+    description:String
+    resturant: Resturant @belongsTo
+    type: tabletype @belongsTo
+    message:String
+
+
+}
