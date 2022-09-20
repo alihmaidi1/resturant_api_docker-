@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("code");
             $table->text("name");
-            $table->boolean("is_default_for_website");
+            $table->boolean("is_default_for_website")->default(0);
             $table->integer("precent_value_in_dular");
             $table->timestamps();
         });

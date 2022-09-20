@@ -11,7 +11,7 @@ final class Addcategory
     public function __invoke($_, array $args)
     {
 
-        return "sdds";
+        return $args["name_ar"];
 
     }
 }

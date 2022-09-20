@@ -69,6 +69,18 @@ return [
     "the resturant was updated successfully"=>"the resturant was updated successfully",
     "the resturant was created successfully"=>"the resturant was created successfully",
     "the resturant was deleted successfully"=>"the resturant was deleted successfully",
+    "the code is required"=>"the code is required",
+    "the name in english is required"=>"the name in english is required",
+    "the name in arabic is required"=>"the name in arabic is required",
+    "the precent value in dular is required"=>"the precent value in dular is required",
+    "the currency was created successfully"=>"the currency was created successfully",
+    "the currency is already exists"=>"the currency is already exists",
+    "id should be exists"=>"id should be exists",
+    "the field is default is required"=>"the field is default is required",
+    "the currency was updated successfully"=>"the currency was updated successfully",
+    "the id is not exists"=>"the id is not exists",
+    "the currency was deleted successfully"=>"the currency was deleted successfully",
+    "the currency is default in your system"=>"the currency is default in your system",
 
 
 

@@ -69,6 +69,18 @@ return [
     "the resturant was updated successfully"=>"تم تعديل بيانات المطعم بنجاح",
     "the resturant was created successfully"=>"تم انشاء المطعم بنجاح",
     "the resturant was deleted successfully"=>"تم حذف المعطم بنجاح",
+    "the code is required"=>"الرمز مطلوب",
+    "the name in english is required"=>"الاسم ياللغة الانلكيزية مطلوب",
+    "the name in arabic is required"=>"الاسم باللغة العربية مطلوب",
+    "the precent value in dular is required"=>" القيمة الحالية في الدولار مطلوبة",
+    "the currency was created successfully"=>"تم اضافة العملة بنجاح",
+    "the currency is already exists"=>"العملة موجودة مسبقا",
+    "id should be exists"=>"البيانات يجب أن تكون موجودة مسبقا",
+    "the field is default is required"=> "حقل العملة الافتراضية مطلوب",
+    "the currency was updated successfully"=>"تم تعديل بيانات العملة بنجاح",
+    "the id is not exists"=>"اليانات غير موجودة لدينا",
+    "the currency was deleted successfully"=>"تم حذف العملة بنجاح",
+    "the currency is default in your system"=>"العملة الافتراضية لا يمكن حذفها",
 
 
 
