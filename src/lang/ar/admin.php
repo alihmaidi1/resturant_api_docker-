@@ -81,6 +81,8 @@ return [
     "the id is not exists"=>"اليانات غير موجودة لدينا",
     "the currency was deleted successfully"=>"تم حذف العملة بنجاح",
     "the currency is default in your system"=>"العملة الافتراضية لا يمكن حذفها",
+    "the id is not exists"=>"البيانات غير موجودة لدينا",
+    "the currency status was updated successfully"=>"تم تعديل الحالة الافتراضية للعملة الموقع",
 
 
 

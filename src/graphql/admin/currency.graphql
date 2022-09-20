@@ -4,6 +4,14 @@ extend type Mutation {
     addcurreny(code:String,name_ar:String,name_en:String,precent_value_in_dular: Float): Currency @validator @guard
     editcurrency(id:ID,code:String,name_en:String,name_ar:String,precent_value_in_dular: Float,is_default_for_website:Int): Currency @validator @guard
     deletecurrency(id:ID): Currency @validator @guard
+    changedefaultcurrency(id:ID): Currency @validator @guard
+}
+
+extend type Query{
+
+    getallcurrency: [Currency]
+
+
 }
 
 type Currency{

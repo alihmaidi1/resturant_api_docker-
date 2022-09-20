@@ -81,6 +81,8 @@ return [
     "the id is not exists"=>"the id is not exists",
     "the currency was deleted successfully"=>"the currency was deleted successfully",
     "the currency is default in your system"=>"the currency is default in your system",
+    "the id is not exists"=>"the id is not exists",
+    "the currency status was updated successfully"=>"the currency status was updated successfully",
 
 
 
