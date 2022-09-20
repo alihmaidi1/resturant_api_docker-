@@ -25,6 +25,11 @@ class resturant extends Model
         return $this->hasMany("\App\Models\\table","resturant_id");
     }
 
+    public function storehouses(){
+
+        return $this->hasMany("\App\Models\storehouse","resturant_id");
+
+    }
 
 }
 

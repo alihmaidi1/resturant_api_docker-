@@ -107,6 +107,10 @@ return [
     "resturant id is required"=>"معرف المطعم مطلوب",
     "resturant id is not exists in our data"=>"هذا المطعم غير موجود في بياناتنا",
     "the table was deelted successfully"=>"تم ازالة الطاولة بنجاح",
+    "isFull is required"=>"حقل حالة الامتلاء مطلوب",
+    "the storehouse was added successfully"=>"تم اضافة المخرن بنجاح",
+    "the storehouse was updated successfully"=>"تم تعديل معلومات المخرن بنجاح",
+    "the storehouse was deleted successfully"=>"تم حذف المخزن بنجاح",
 
 
 

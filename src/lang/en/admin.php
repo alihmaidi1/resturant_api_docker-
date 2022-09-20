@@ -107,9 +107,10 @@ return [
     "resturant id is required"=>"resturant id is required",
     "resturant id is not exists in our data"=>"resturant id is not exists in our data",
     "the table was deelted successfully"=>"the table was deelted successfully",
-
-
-
+    "isFull is required"=>"isFull is required",
+    "the storehouse was added successfully"=>"the storehouse was added successfully",
+    "the storehouse was updated successfully"=>"the storehouse was updated successfully",
+    "the storehouse was deleted successfully"=>"the storehouse was deleted successfully",
 
 
 
