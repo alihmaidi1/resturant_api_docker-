@@ -83,6 +83,15 @@ return [
     "the currency is default in your system"=>"العملة الافتراضية لا يمكن حذفها",
     "the id is not exists"=>"البيانات غير موجودة لدينا",
     "the currency status was updated successfully"=>"تم تعديل الحالة الافتراضية للعملة الموقع",
+    "price is required"=>"السعر مطلوب",
+    "name in english is required"=>"الاسم باللغة الانكليزية مطلوب",
+    "name in arabic is required"=>"الاسم باللغة العربية مطلوب",
+    "the currency id is required"=>"معرف العملة مطلوب",
+    "currency id is not exists in our data"=>"هذه العملة غير موجودة في بياناتنا",
+    "the table type was added successfully"=>"تم اضافة نوع الطاولة بنجاح",
+    "the currency id is not exists in data"=>"معرف العملة غير موجود في بياناتنا",
+    "the table type was updated successfully"=>"تم تعديل معلومات حجز الطاولة بنجاح",
+    "the table type was deleted successfully"=>"تم حذف نوع الطاولة بنجاح",
 
 
 

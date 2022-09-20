@@ -1,0 +1,23 @@
+extend type Mutation{
+
+    addtabletype(price: Float,name_en:String,name_ar:String,currency_id:Int): tabletype @validator @guard
+    edittabletype(id:ID,name_en:String,name_ar:String,price:Float,currency_id:Int): tabletype @validator @guard
+    deletetabletype(id:ID):tabletype @validator @guard
+
+}
+
+extend type Query{
+
+    getalltabletype: [tabletype!]
+
+}
+
+type tabletype{
+
+
+    id:ID
+    price: Float
+    name: String
+    currency: Currency @belongsTo
+    message: String
+}

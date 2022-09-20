@@ -83,7 +83,15 @@ return [
     "the currency is default in your system"=>"the currency is default in your system",
     "the id is not exists"=>"the id is not exists",
     "the currency status was updated successfully"=>"the currency status was updated successfully",
-
+    "price is required"=>"price is required",
+    "name in english is required"=>"name in english is required",
+    "name in arabic is required"=>"name in arabic is required",
+    "the currency id is required"=>"the currency id is required",
+    "currency id is not exists in our data"=>"currency id is not exists in our data",
+    "the table type was added successfully"=>"the table type was added successfully",
+    "the currency id is not exists in data"=>"the currency id is not exists in data",
+    "the table type was updated successfully"=>"the table type was updated successfully",
+    "the table type was deleted successfully"=>"the table type was deleted successfully",
 
 
 

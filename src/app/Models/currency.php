@@ -20,6 +20,10 @@ class currency extends Model
 
     }
 
+    public function tabletype(){
+
+        return $this->belongsToMany("\App\Models\\tabletype","currency_id");
+    }
     public function jobs(){
 
         return $this->hasMany("App\Models\job","currency_id");

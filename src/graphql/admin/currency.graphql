@@ -23,5 +23,5 @@ type Currency{
     precent_value_in_dular:String
     jobs:Job @hasMany
     message: String
-
+    tabletype: tabletype @hasMany
 }
