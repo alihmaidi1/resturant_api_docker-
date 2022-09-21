@@ -24,4 +24,9 @@ class storehouse extends Model
         return $this->belongsTo("\App\Models\\resturant","resturant_id");
     }
 
+
+    public function goods(){
+
+        return $this->belongsToMany("\App\Models\good","\App\Models\storeGood","good_id","storehouse_id");
+    }
 }

@@ -1,0 +1,20 @@
+extend type Mutation{
+
+    addgood(name_en:String,name_ar:String): Good @validator @guard
+    editgood(id:ID,name_en:String,name_ar:String): Good @validator @guard
+    deletegood(id:ID): Good @validator @guard
+}
+
+extend type Query{
+
+    getallgood: [Good!] @all @guard
+}
+
+type Good{
+
+    id:ID
+    name: String
+    message:String
+    storehouses: [storehouse] @belongsToMany
+
+}

@@ -1,0 +1,19 @@
+
+extend type Mutation{
+
+    addgoodstorehouse(quantity:Int,min_quantity:Int,good_id:ID,storehouse_id:ID): goodstore @validator @guard
+    editgoodstore(id:ID,quantity:Int):goodstore @validator @guard
+    editminquantity(id:ID,min_quantity:Int):goodstore @validator @guard
+    deletegoodstorehouse(id:ID): goodstore @validator @guard
+}
+
+
+type goodstore{
+
+    id:ID
+    quantity: Int
+    min_quantity: Int
+    message:String
+
+
+}

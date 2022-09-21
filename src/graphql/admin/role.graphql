@@ -10,7 +10,7 @@ type Role{
     id:ID
     name:String
     permssion:JSON
-    admins:Admin @hasMany
+    admins:[Admin] @hasMany
     message:String
 
 }

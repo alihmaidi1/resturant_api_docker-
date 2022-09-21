@@ -111,6 +111,21 @@ return [
     "the storehouse was added successfully"=>"تم اضافة المخرن بنجاح",
     "the storehouse was updated successfully"=>"تم تعديل معلومات المخرن بنجاح",
     "the storehouse was deleted successfully"=>"تم حذف المخزن بنجاح",
+    "the good was added successfully"=>"تم اضافة الموارد بنجاح",
+    "the good was updated successfully"=>"تم تعديل معلومات الموارد بنجاح",
+    "the good was deleted successfully"=>"تم حذف هذه الموارد بنجاح",
+    "quantity is required"=>"الكمية مطلوبة",
+    "the min quantity is required"=>"الكمية الدنيا مطلوبة",
+    "good id is required"=>"معرف الموارد مطلوب",
+    "the good is not exists in our data"=>"الموارد غير موجودة ضمن بياناتنا",
+    "storehouse id is required"=>"معرف المخزن مطلوب",
+    "storehouse is not exists in our data"=>"المخزن غير موجود ضمن بياناتنا",
+    "the good was added to storehouse successfully"=>"تم أضافة الموارد للمخزن بنجاح",
+    "the quantity of good was updated successfully in this storehouse"=>"تم تعديل كمية الموارد في هذا المستودع",
+    "min quantity is required"=>"الكمية الدنيا مطلوبة",
+    "min quantity was updated successfully"=>"تم تعديل الكمية الدنيا بنجاح",
+    "the good was delete from this storehouse successfully"=>"تم حذف الموارد من هذا المخزن بنجاح",
+
 
 
 

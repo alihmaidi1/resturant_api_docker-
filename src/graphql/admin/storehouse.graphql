@@ -15,5 +15,5 @@ type storehouse{
     isFull: String
     resturant: Resturant @belongsTo
     message: String
-
+    goods: [Good] @belongsToMany
 }

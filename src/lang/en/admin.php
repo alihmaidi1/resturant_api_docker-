@@ -111,7 +111,20 @@ return [
     "the storehouse was added successfully"=>"the storehouse was added successfully",
     "the storehouse was updated successfully"=>"the storehouse was updated successfully",
     "the storehouse was deleted successfully"=>"the storehouse was deleted successfully",
-
+    "the good was added successfully"=>"the good was added successfully",
+    "the good was updated successfully"=>"the good was updated successfully",
+    "the good was deleted successfully"=>"the good was deleted successfully",
+    "quantity is required"=>"quantity is required",
+    "the min quantity is required"=>"the min quantity is required",
+    "good id is required"=>"good id is required",
+    "the good is not exists in our data"=>"the good is not exists in our data",
+    "storehouse id is required"=>"storehouse id is required",
+    "storehouse is not exists in our data"=>"storehouse is not exists in our data",
+    "the good was added to storehouse successfully"=>"the good was added to storehouse successfully",
+    "the quantity of good was updated successfully in this storehouse"=>"the quantity of good was updated successfully in this storehouse",
+    "min quantity is required"=>"min quantity is required",
+    "min quantity was updated successfully"=>"min quantity was updated successfully",
+    "the good was delete from this storehouse successfully"=>"the good was delete from this storehouse successfully",
 
 
 

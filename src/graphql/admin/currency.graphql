@@ -21,7 +21,7 @@ type Currency{
     name:String
     is_default_for_website:String
     precent_value_in_dular:String
-    jobs:Job @hasMany
+    jobs:[Job] @hasMany
     message: String
-    tabletype: tabletype @hasMany
+    tabletype: [tabletype] @hasMany
 }
