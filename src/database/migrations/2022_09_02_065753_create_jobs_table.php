@@ -13,8 +13,8 @@ return new class extends Migration
             $table->id();
             $table->text("name");
             $table->string("salary");
-            $table->unsignedBigInteger("currency_id");
-            $table->foreign("currency_id")->references("id")->on("currencies");
+            $table->unsignedBigInteger("currency_id")->nullable();
+            $table->foreign("currency_id")->references("id")->on("currencies")->onDelete("set null")->onUpdate("cascade");
             $table->timestamps();
         });
     }

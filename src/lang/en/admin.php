@@ -125,7 +125,16 @@ return [
     "min quantity is required"=>"min quantity is required",
     "min quantity was updated successfully"=>"min quantity was updated successfully",
     "the good was delete from this storehouse successfully"=>"the good was delete from this storehouse successfully",
-
-
+    "salary is required"=>"salary is required",
+    "currency is not exists in our data"=>"currency is not exists in our data",
+    "the job was add successfully"=>"the job was add successfully",
+    "the job was updated successully"=>"the job was updated successully",
+    "the job was deleted successfully"=>"the job was deleted successfully",
+    "year is required"=>"year is required",
+    "benifit is required"=>"benifit is required",
+    "vacation is required"=>"vacation is required",
+    "the experiece was added successfully"=>"the experiece was added successfully",
+    "the experiece was updated successfully"=>"the experiece was updated successfully",
+    "the experiece was deleted successfully"=>"the experiece was deleted successfully",
 
 ];

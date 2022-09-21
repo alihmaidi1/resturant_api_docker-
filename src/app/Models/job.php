@@ -10,7 +10,7 @@ class job extends Model
 {
 
     use HasFactory,HasTranslations;
-    public $fillable=["name","salary"];
+    public $fillable=["name","salary","currency_id"];
     public $hidden=["created_at","updated_at"];
     public $translatable = ['name'];
 

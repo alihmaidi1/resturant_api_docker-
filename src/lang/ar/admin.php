@@ -125,6 +125,18 @@ return [
     "min quantity is required"=>"الكمية الدنيا مطلوبة",
     "min quantity was updated successfully"=>"تم تعديل الكمية الدنيا بنجاح",
     "the good was delete from this storehouse successfully"=>"تم حذف الموارد من هذا المخزن بنجاح",
+    "salary is required"=>"الراتب مطلوب",
+    "currency is not exists in our data"=>"هذه العملة غير موجودة في بياناتنا",
+    "the job was add successfully"=>"تم أضافة الوظيفة بنجاح",
+    "the job was updated successully"=>"تم تعديل الوظيفة بنجاح",
+    "the job was deleted successfully"=>"تم حذف الوظيفة بنجاح",
+    "year is required"=>"السنة مطلوبة",
+    "benifit is required"=>"حقل الفوائد مطلوب",
+    "vacation is required"=>"حقل الاجازات مطلوب",
+    "the experiece was added successfully"=>"تم أضافة معلومات الخبرة بنجاح",
+    "the experiece was updated successfully"=>"تم تعديل معلومات الخبرة بنجاح",
+    "the experiece was deleted successfully"=>"تم حذف الخبرة المطلوبة بنجاح",
+
 
 
 

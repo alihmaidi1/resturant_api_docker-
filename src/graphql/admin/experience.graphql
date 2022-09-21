@@ -1,3 +1,16 @@
+
+extend type Mutation{
+
+    addexperiece(year:Int,benifit:Int,vacation:Int): Experience @validator @guard
+    editexperiece(id:ID,year:Int,benifit:Int,vacation:Int): Experience @validator @guard
+    deleteexperiece(id:ID):Experience @validator @guard
+}
+
+extend type Query{
+
+    getallexperiece: [Experience]  @guard
+
+}
 type Experience{
 
     id:ID
@@ -5,5 +18,5 @@ type Experience{
     benifit:Int
     vacation:Int
     employees:[Employee] @hasMany
-
+    message: String
 }

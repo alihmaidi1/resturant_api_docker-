@@ -1,3 +1,18 @@
+extend type Mutation{
+
+    addjob(name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard
+    editjob(id:ID,name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard
+    deletejob(id:ID): Job @validator @guard
+
+
+}
+
+extend type Query{
+
+    getalljob: [Job!] @all @guard
+
+}
+
 type Job{
 
     id:ID
