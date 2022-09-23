@@ -9,7 +9,7 @@ class employee extends Model
 {
     use HasFactory;
 
-    public $fillable=["name","email","phone","address","date_of_birth","is_empty","vacation_token","gender"];
+    public $fillable=["name","email","phone","address","date_of_birth","is_empty","vacation_token","gender","job_id","manager_id","resturant_id","experience_id"];
     public $hidden=["job_id","manager_id","resturant_id","experience_id","created_at","updated_at"];
 
     public function job(){

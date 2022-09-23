@@ -136,5 +136,26 @@ return [
     "the experiece was added successfully"=>"the experiece was added successfully",
     "the experiece was updated successfully"=>"the experiece was updated successfully",
     "the experiece was deleted successfully"=>"the experiece was deleted successfully",
+    "email is required"=>"email is required",
+    "this field should be email"=>"this field should be email",
+    "phone is required"=>"phone is required",
+    "address is required"=>"address is required",
+    "date of birth is required"=>"date of birth is required",
+    "this field should be date"=>"this field should be date",
+    "is empty field is required"=>"is empty field is required",
+    "vacation token is required"=>"vacation token is required",
+    "gender is required"=>"gender is required",
+    "manager id is not exists in our data"=>"manager id is not exists in our data",
+    "job id is not exists in our data"=>"job id is not exists in our data",
+    "job id is required"=>"job id is required",
+    "experiece id is required"=>"experiece id is required",
+    "experiece id is not exists in our data"=>"experiece id is not exists in our data",
+    "name is required"=>"name is required",
+    "the employee was added successfully"=>"the employee was added successfully",
+    "the employee was updated successfully"=>"the employee was updated successfully",
+    "the data was fethed successfully"=>"the data was fethed successfully",
+    "the employee was deleted successfully"=>"the employee was deleted successfully",
+
+
 
 ];

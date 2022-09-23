@@ -10,7 +10,7 @@ extend type Mutation{
 
 type Query{
 
-    getallresturant:[Resturant_without_message!] @guard
+    getallresturant:[Resturant_without_message!]
 
 }
 

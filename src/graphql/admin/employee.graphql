@@ -1,3 +1,16 @@
+extend type Mutation{
+
+    addemployee(name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard
+    editemployee(id:ID,name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard
+    getemployee(id:ID):Employee @validator @guard
+    deleteemployee(id:ID): Employee @validator @guard
+}
+
+extend type Query{
+
+    getallemployee: [Employee!] @all
+
+}
 type Employee{
 
     id:ID
@@ -7,9 +20,10 @@ type Employee{
     address:String
     date_of_birth:String
     is_empty:String
+    message:String
     vacation_token:Int
     gender:String
-    resturant:Resturant @belongsTo
+    resturant: Resturant @belongsTo
     manager: Employee @belongsTo
     employees: [Employee] @hasMany
     job:Job @belongsTo
