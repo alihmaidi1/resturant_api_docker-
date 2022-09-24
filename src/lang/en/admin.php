@@ -157,6 +157,22 @@ return [
     "the employee was deleted successfully"=>"the employee was deleted successfully",
     "the setting was fetched successfully"=>"the setting was fetched successfully",
     "the setting was updated successfully"=>"the setting was updated successfully",
+    "logo is required"=>"logo is required",
+    "logo should be image"=>"logo should be image",
+    "description in english is required"=>"description in english is required",
+    "description in arabic is required"=>"description in arabic is required",
+    "meta title in english is required"=>"meta title in english is required",
+    "meta title in arabic is required"=>"meta title in arabic is required",
+    "meta description in english is required"=>"meta description in english is required",
+    "meta description in arabic is required"=>"meta description in arabic is required",
+    "meta logo is required"=>"meta logo is required",
+    "meta logo should be image"=>"meta logo should be image",
+    "keywords is required"=>"keywords is required",
+    "status is required"=>"status is required",
+    "the category was added successfully"=>"the category was added successfully",
+    "the category was updated successfully"=>"the category was updated successfully",
+    "the data was fethed successfully"=>"the data was fethed successfully",
+    "the category was deleted successfully"=>"the category was deleted successfully",
 
 
 

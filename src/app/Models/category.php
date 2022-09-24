@@ -9,7 +9,11 @@ class category extends Model
 {
     use HasFactory;
     use HasTranslations;
-    public $translatable = ['name'];
-    public $fillable=["name","logo","description","meta_title","meta_logo","keywords","status"];
+    public $translatable = ['name',"description","meta_title","meta_description"];
+    public $fillable=["name","logo","description","meta_description","meta_title","meta_logo","keywords","status"];
+    public $hidden=["created_at","updated_at"];
+    public function images(){
 
+        return $this->morphMany("\App\Models\image","imageable");
+    }
 }

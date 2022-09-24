@@ -157,6 +157,22 @@ return [
     "the employee was deleted successfully"=>"تم حذف بيانات الموظف بنجاح",
     "the setting was fetched successfully"=>"تم استخراج الاعدادات بنجاح",
     "the setting was updated successfully"=>"تم تحديث الاعدادات بنجاح",
+    "logo is required"=>"صورة الغلاف مطلوبة",
+    "logo should be image"=>"اللوغو يجب أن تكون من نوع صورة",
+    "description in english is required"=>"الوصف باللغة الانكليزية مطلوب",
+    "description in arabic is required"=>"الوصف باللغة العربية مطلوب",
+    "meta title in english is required"=>"عنوان الميتا باللغة الانكليزية مطلوب",
+    "meta title in arabic is required"=>"عنوان الميتا باللغة العربية مطلوب",
+    "meta description in english is required"=>"وصف الميتا باللغة الانكليزية مطلوب",
+    "meta description in arabic is required"=>"ميتا الوصف باللغة العربية مطلوب",
+    "meta logo is required"=>"غلاف الميتا مطلوب",
+    "meta logo should be image"=>"غلاف الميتا يجب أن يكون من نوع صورة",
+    "keywords is required"=>"الكلمات المتفاحية مطلوبة",
+    "status is required"=>"الحالة مطلوبة",
+    "the category was added successfully"=>"تم أضافة الصنف بنجاح",
+    "the category was updated successfully"=>"تم تعديل الصنف بنجاح",
+    "the data was fethed successfully"=>"تم استخراج البيانات بنجاح",
+    "the category was deleted successfully"=>"تم حذف الصنف بنجاح",
 
 
 

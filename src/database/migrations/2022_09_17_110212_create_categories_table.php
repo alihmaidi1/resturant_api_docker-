@@ -18,7 +18,8 @@ return new class extends Migration
             $table->text("name");
             $table->string("logo");
             $table->text("description");
-            $table->string("meta_title");
+            $table->text("meta_description");
+            $table->text("meta_title");
             $table->string("meta_logo");
             $table->string("keywords");
             $table->boolean("status");
