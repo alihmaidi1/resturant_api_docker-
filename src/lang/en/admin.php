@@ -155,6 +155,8 @@ return [
     "the employee was updated successfully"=>"the employee was updated successfully",
     "the data was fethed successfully"=>"the data was fethed successfully",
     "the employee was deleted successfully"=>"the employee was deleted successfully",
+    "the setting was fetched successfully"=>"the setting was fetched successfully",
+    "the setting was updated successfully"=>"the setting was updated successfully",
 
 
 

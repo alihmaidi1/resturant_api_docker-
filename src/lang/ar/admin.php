@@ -155,6 +155,8 @@ return [
     "the employee was updated successfully"=>"تم تعديل بيانات الموظف بنجاح",
     "the data was fethed successfully"=>"تم استخراج البيانات بنجاح",
     "the employee was deleted successfully"=>"تم حذف بيانات الموظف بنجاح",
+    "the setting was fetched successfully"=>"تم استخراج الاعدادات بنجاح",
+    "the setting was updated successfully"=>"تم تحديث الاعدادات بنجاح",
 
 
 
