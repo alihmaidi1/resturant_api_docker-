@@ -173,6 +173,12 @@ return [
     "the category was updated successfully"=>"the category was updated successfully",
     "the data was fethed successfully"=>"the data was fethed successfully",
     "the category was deleted successfully"=>"the category was deleted successfully",
+    "rank is required"=>"rank is required",
+    "rank is exists in our data"=>"rank is exists in our data",
+    "the slider was added successfully"=>"the slider was added successfully",
+    "the slider was updated successfully"=>"the slider was updated successfully",
+    "the slider was deleted successfully"=>"the slider was deleted successfully",
+
 
 
 

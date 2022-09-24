@@ -173,6 +173,11 @@ return [
     "the category was updated successfully"=>"تم تعديل الصنف بنجاح",
     "the data was fethed successfully"=>"تم استخراج البيانات بنجاح",
     "the category was deleted successfully"=>"تم حذف الصنف بنجاح",
+    "rank is required"=>"الترتيب مطلوب",
+    "rank is exists in our data"=>"هذا الترتيب موجود مسبقا",
+    "the slider was added successfully"=>"تمت أضافة القائمة المتحركة بنجاح",
+    "the slider was updated successfully"=>"تم تحديث القائمة المتحركة بنجاح",
+    "the slider was deleted successfully"=>"تم حذف القائمة المتحركة بنجاح",
 
 
 

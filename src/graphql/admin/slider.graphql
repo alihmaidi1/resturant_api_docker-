@@ -1,0 +1,20 @@
+extend type Mutation{
+
+    addslider(logo:Upload,status:Int,rank:Int): Slider @validator @guard
+    editslider(id:ID,logo:Upload,status:Int,rank:Int): Slider @validator @guard
+    deleteslider(id:ID): Slider @validator @guard
+
+}
+extend type Query{
+
+    getallslider: [Slider!]
+
+}
+type Slider{
+
+    id:ID
+    logo:String
+    status:Int
+    rank:Int
+    message:String
+}
