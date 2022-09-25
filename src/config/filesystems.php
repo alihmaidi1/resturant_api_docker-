@@ -77,6 +77,13 @@ return [
             'throw' => false,
         ],
 
+        'food' => [
+            'driver' => 'local',
+            'root' => public_path("food"),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
 
         's3' => [
             'driver' => 's3',

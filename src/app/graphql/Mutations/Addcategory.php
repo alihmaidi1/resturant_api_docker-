@@ -44,8 +44,6 @@ final class Addcategory
             ]);
 
         }
-        $category->logo=asset("category/".$category->logo);
-        $category->meta_logo=asset("category/".$category->meta_logo);
         $category->message=trans("admin.the category was added successfully");
         Cache::put("category_".$category->id,$category);
         Cache::pull("categorys");

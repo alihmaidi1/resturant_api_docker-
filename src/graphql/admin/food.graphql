@@ -1,0 +1,32 @@
+extend type Mutation{
+
+
+    addfood(name_en:String,name_ar:String,thumbnail:Upload,description_en:String,description_ar:String,tag:String,meta_title_en:String,meta_title_ar:String,meta_description_en:String,meta_description_ar:String,meta_logo:Upload,meta_keyword:String,category_id:ID,images:[Upload]): Food @validator @guard
+    editfood(id:ID,name_en:String,name_ar:String,thumbnail:Upload,description_en:String,description_ar:String,tag:String,meta_title_en:String,meta_title_ar:String,meta_description_en:String,meta_description_ar:String,meta_logo:Upload,meta_keyword:String,category_id:ID,images:[Upload]): Food @validator @guard
+    deletefood(id:ID): Food @validator @guard
+}
+
+extend type Query{
+
+    getallfood:[Food!]
+    getfood(id:ID): Food @validator
+
+}
+
+type Food{
+
+    id:ID
+    name:String
+    description:String
+    tag:String
+    thumbnail:String
+    meta_title:String
+    meta_description:String
+    meta_logo:String
+    meta_keyword:String
+    category: Category @belongsTo
+    message:String
+    images:[image!] @morphMany
+
+
+}

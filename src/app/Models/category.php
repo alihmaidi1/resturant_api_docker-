@@ -16,4 +16,21 @@ class category extends Model
 
         return $this->morphMany("\App\Models\image","imageable");
     }
+
+
+    public function getLogoAttribute($value){
+
+        return asset("category/".$value);
+
+    }
+
+    public function getMetaLogoAttribute($value){
+
+        return asset("category/".$value);
+
+    }
+    public function foods(){
+
+        return $this->hasMany("\App\Models\\food","category_id");
+    }
 }

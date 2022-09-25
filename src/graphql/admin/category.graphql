@@ -28,5 +28,5 @@ type Category{
     status: String
     message:String
     images:[image!] @morphMany
-
+    foods: Food @hasMany
 }

@@ -19,7 +19,7 @@ final class Editcategory
         $category=category::find($args["id"]);
 
         if($args["logo"]!=null){
-            unlink(public_path("category/".$category->logo));
+            unlink(public_path("category/".$category->getRawOriginal("logo")));
             $logo=$args["logo"];
             $logoname=rand(0,9999999).time().".".$logo->getClientOriginalExtension();
             Storage::disk("category")->putFileAs("",$logo,$logoname);
@@ -31,7 +31,7 @@ final class Editcategory
         }
 
         if($args["meta_logo"]!=null){
-            unlink(public_path("category/".$category->meta_logo));
+            unlink(public_path("category/".$category->getRawOriginal("meta_logo")));
             $meta_logo=$args["meta_logo"];
             $meta_logoname=rand(0,9999999).time().".".$meta_logo->getClientOriginalExtension();
             Storage::disk("category")->putFileAs("",$meta_logo,$meta_logoname);

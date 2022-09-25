@@ -186,7 +186,16 @@ return [
     "where show is required"=>"حقل مكان الظهور مطلوب",
     "where show is not exists in our data"=>"مكان الظهور هذا غير موجود ضمن بياناتنا",
     "the banner was deleted successfully"=>"تم حذف البانر بنجاح",
-
+    "thumbnail is required"=>"الصورة الاساسية مطلوبة",
+    "thumbnail should be image"=>"الصورة الاساسية يجب أن تكون من نوع صورة",
+    "tag is required"=>"التاغات مطلوبة",
+    "meta keyword is required"=>"كلمات الميتا المفتاحية مطلوبة",
+    "category id is required"=>"معرف الصنف مطلوب",
+    "category is not exists in our data"=>"هذا الصنف غير موجود ضمن بياناتنا",
+    "the food was added successfully"=>"تم أضافة الطعام بنجاح",
+    "the food was updated successfully"=>"تم تعديل الطعام بنجاح",
+    "the data was fetched successfully"=>"تم استخراج البيانات بنجاح",
+    "the food was deleted successfully"=>"تم حذف الطعام بنجاح",
 
 
 

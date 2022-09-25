@@ -186,6 +186,18 @@ return [
     "where show is required"=>"where show is required",
     "where show is not exists in our data"=>"where show is not exists in our data",
     "the banner was deleted successfully"=>"the banner was deleted successfully",
+    "thumbnail is required"=>"thumbnail is required",
+    "thumbnail should be image"=>"thumbnail should be image",
+    "tag is required"=>"tag is required",
+    "meta keyword is required"=>"meta keyword is required",
+    "category id is required"=>"category id is required",
+    "category is not exists in our data"=>"category is not exists in our data",
+    "the food was added successfully"=>"the food was added successfully",
+    "the food was updated successfully"=>"the food was updated successfully",
+    "the data was fetched successfully"=>"the data was fetched successfully",
+    "the food was deleted successfully"=>"the food was deleted successfully",
+
+
 
 
 
