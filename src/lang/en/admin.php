@@ -178,6 +178,14 @@ return [
     "the slider was added successfully"=>"the slider was added successfully",
     "the slider was updated successfully"=>"the slider was updated successfully",
     "the slider was deleted successfully"=>"the slider was deleted successfully",
+    "url is required"=>"url is required",
+    "url field should be url"=>"url field should be url",
+    "where show field is required"=>"where show field is required",
+    "the banner was added successfully"=>"the banner was added successfully",
+    "the banner was updated successfully"=>"the banner was updated successfully",
+    "where show is required"=>"where show is required",
+    "where show is not exists in our data"=>"where show is not exists in our data",
+    "the banner was deleted successfully"=>"the banner was deleted successfully",
 
 
 

@@ -178,6 +178,14 @@ return [
     "the slider was added successfully"=>"تمت أضافة القائمة المتحركة بنجاح",
     "the slider was updated successfully"=>"تم تحديث القائمة المتحركة بنجاح",
     "the slider was deleted successfully"=>"تم حذف القائمة المتحركة بنجاح",
+    "url is required"=>"الرابط مطلوب",
+    "url field should be url"=>"حقل الرابط يجب أن يكون رابط عنوان الكتروني",
+    "where show field is required"=>"حقل أماكن الظهور مطلوب",
+    "the banner was added successfully"=>"تم أضافة النانر بنجاح",
+    "the banner was updated successfully"=>"تم تعديل البانر بنجاح",
+    "where show is required"=>"حقل مكان الظهور مطلوب",
+    "where show is not exists in our data"=>"مكان الظهور هذا غير موجود ضمن بياناتنا",
+    "the banner was deleted successfully"=>"تم حذف البانر بنجاح",
 
 
 

@@ -1,0 +1,28 @@
+extend type Mutation{
+
+    addbanner(logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard
+    editbanner(id:ID,logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard
+    deletebanner(id:ID):Banner @validator @guard
+
+
+}
+
+extend type Query{
+
+    getallbanner:[Banner!]
+    getbannerwhereshow(where_show:Int):[Banner!] @validator
+
+}
+
+
+type Banner{
+
+    id:ID
+    logo:String
+    status:Int
+    url:String
+    rank:Int
+    message:String
+    where_show:Int
+
+    }
