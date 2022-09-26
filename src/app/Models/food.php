@@ -19,6 +19,15 @@ class food extends Model
     }
 
 
+    public function resturants(){
+
+
+        return $this->belongsToMany("\App\Models\\resturant","\App\Models\\resturant_food","resturant_id","food_id");
+
+
+    }
+
+
     public function getMetaLogoAttribute($value){
 
         return asset("food/".$value);

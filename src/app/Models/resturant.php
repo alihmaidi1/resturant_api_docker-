@@ -31,5 +31,14 @@ class resturant extends Model
 
     }
 
+
+    public function foods(){
+
+
+        return $this->belongsToMany("\App\Models\\food","\App\Models\\resturant_food","food_id","resturant_id");
+
+    }
+
+
 }
 

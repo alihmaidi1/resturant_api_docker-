@@ -14,6 +14,13 @@ class currency extends Model
     public $hidden=["created_at","updated_at"];
     public $translatable = ['name'];
 
+
+    public function resturant_food(){
+
+        return $this->hasMany("\App\Models\\resturant_food","currency_id");
+    }
+
+
     public function getIs_default_for_websiteAttribute($value){
 
         return ($value)?trans("admin.yes"):trans("admin.no");

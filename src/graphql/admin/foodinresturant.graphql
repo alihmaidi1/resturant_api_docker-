@@ -1,0 +1,26 @@
+extend type Mutation{
+
+    addfoodinresturant(resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard
+    editfoodinresturant(id:ID,resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard
+    deletefoodresturant(id:ID):Foodinresturant @validator @guard
+
+}
+
+
+extend type Query{
+
+
+    getallresturantfood:[Foodinresturant!]
+
+}
+
+type Foodinresturant{
+
+    id:ID
+    isVisiable: Int
+    price: Float
+    currency: Currency @belongsTo
+    message: String
+
+
+}

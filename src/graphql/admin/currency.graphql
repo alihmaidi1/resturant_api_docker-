@@ -24,4 +24,6 @@ type Currency{
     jobs:[Job] @hasMany
     message: String
     tabletype: [tabletype] @hasMany
+    foodinresturant:[Foodinresturant!] @hasMany
+
 }

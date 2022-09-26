@@ -27,6 +27,6 @@ type Food{
     category: Category @belongsTo
     message:String
     images:[image!] @morphMany
-
+    resturants:[Resturant!] @belongsToMany
 
 }

@@ -196,6 +196,14 @@ return [
     "the food was updated successfully"=>"the food was updated successfully",
     "the data was fetched successfully"=>"the data was fetched successfully",
     "the food was deleted successfully"=>"the food was deleted successfully",
+    "the food was added to resturant successfully"=>"the food was added to resturant successfully",
+    "food id is required"=>"food id is required",
+    "food id is not exists in our data"=>"food id is not exists in our data",
+    "isVisiable is required"=>"isVisiable is required",
+    "currency id is required"=>"currency id is required",
+    "id is not exists in our data"=>"id is not exists in our data",
+    "the food in resturant was updated data successfully"=>"the food in resturant was updated data successfully",
+
 
 
 

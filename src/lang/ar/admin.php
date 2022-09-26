@@ -196,6 +196,14 @@ return [
     "the food was updated successfully"=>"تم تعديل الطعام بنجاح",
     "the data was fetched successfully"=>"تم استخراج البيانات بنجاح",
     "the food was deleted successfully"=>"تم حذف الطعام بنجاح",
+    "the food was added to resturant successfully"=>"تم أضافة الطعام لهذا المطعم بنجاح",
+    "food id is required"=>"معرف الطعام مطلوب",
+    "food id is not exists in our data"=>"معرف الطعام غير موجود ضمن بياناتنا",
+    "isVisiable is required"=>"حقل الاتاحية مطلوب",
+    "currency id is required"=>"معرف العملة مطلوب",
+    "id is not exists in our data"=>"المعرف غير موجود ضمن بياناتنا" ,
+    "the food in resturant was updated data successfully"=>"تم تعديل معلومات الطعام في المطعم",
+
 
 
 
