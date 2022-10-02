@@ -223,6 +223,15 @@ return [
     "the reservation was deleted successfully"=>"تم حذف الحجز بنجاح",
     "code is required"=>"الكود مطلوب",
     "we don't have any data"=>"لا نملك أي بيانات",
+    "the email is exists in our data"=>"هذا البريد الالكتروني موجود مسبقا في بياناتنا",
+    "password is required"=>"كلمة المرور مطلوبة",
+    "the account was created successfully"=>"تم انشاء الحساب بنجاح",
+    "the account was verified successfully"=>"تم تأكيد حسابك بنجاح",
+    "the code is not correct"=>"الكود غير صحيح",
+    "copon notification field is required"=>"حقل اشعارات العروض مطلوب",
+    "the profile was updated successfully"=>"تم تعديل معلومات الملف الشخصي بنجاح",
+    "email is not exists in our data"=>"هذا البريد الالكتروني غير موجود ضمن بياناتنا",
+    "password is required"=>"كلمة المرور مطلوبة",
 
 
 

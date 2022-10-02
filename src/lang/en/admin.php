@@ -223,6 +223,16 @@ return [
     "the reservation was deleted successfully"=>"the reservation was deleted successfully",
     "code is required"=>"code is required",
     "we don't have any data"=>"we don't have any data",
+    "the email is exists in our data"=>"the email is exists in our data",
+    "password is required"=>"password is required",
+    "the account was created successfully"=>"the account was created successfully",
+    "the account was verified successfully"=>"the account was verified successfully",
+    "the code is not correct"=>"the code is not correct",
+    "copon notification field is required"=>"copon notification field is required",
+    "the profile was updated successfully"=>"the profile was updated successfully",
+    "email is not exists in our data"=>"email is not exists in our data",
+    "password is required"=>"password is required",
+
 
 
 

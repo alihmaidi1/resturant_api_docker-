@@ -47,6 +47,13 @@ return [
         ],
 
 
+        'user_api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+
+
+
         'reset_password' => [
             'driver' => 'jwt',
             'provider' => 'admins',

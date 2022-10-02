@@ -1,0 +1,30 @@
+
+extend type Mutation {
+
+    createuser(name:String,email:String,password:String):User @validator
+    verifiedaccount(id:ID,code:String): Message @validator @guard(with:["user_api"])
+    refreshtokenuser(your_refresh_token:String): Token
+    edituserprofile(id:ID,name:String,copon_notification:Int): User @validator @guard(with:["user_api"])
+    loginuser(email:String,password:String):User @validator
+    logoutuser:User @guard(with:["user_api"])
+}
+
+
+type User{
+
+    id:ID
+    name:String
+    code:String
+    balance:Int
+    copon_notification: String
+    email:String
+    status: String
+    operation_code:String
+    message:String
+    token_info: Token
+
+}
+type Message{
+
+    message:String
+}
