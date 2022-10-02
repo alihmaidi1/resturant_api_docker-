@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
-
+use \App\Http\Controllers\paypal;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +14,5 @@ use Illuminate\Support\Facades\Redis;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-
-    Cache::set("name","ali");
-    return Cache::get("name");
-
-});
-
+Route::get("/paypal_success",[paypal::class,"success"]);
 

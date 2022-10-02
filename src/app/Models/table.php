@@ -28,4 +28,14 @@ class table extends Model
         return ($value)?trans("admin.free"):trans("admin.busy");
 
     }
+
+
+    public function reservations(){
+
+        return $this->hasMany("\App\Models\\reservation","table_id");
+
+    }
+
+
+
 }

@@ -1,0 +1,32 @@
+extend type Mutation{
+
+    addreservation(table_id:ID,name:String,start:String,end:String): reservation @validator
+    editreservation(id:ID,name:String,start:String,end:String,table_id:Int): reservation @validator
+    editnamereservtion(id:ID,name:String):reservation @validator
+    deletereservation(id:ID):reservation @validator
+}
+
+extend type Query{
+
+
+    getreservation(code:String,name:String):reservation @validator
+
+}
+
+
+type reservation{
+
+    id:ID
+    code:String
+    table: table @belongsTo
+    name:String
+    status: Int
+    start:String
+    end:String
+    message:String
+    currency: Currency
+    price:Float
+    paymentUrl: String
+
+
+}

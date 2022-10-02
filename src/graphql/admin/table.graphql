@@ -17,6 +17,7 @@ type table{
     resturant: Resturant @belongsTo
     type: tabletype @belongsTo
     message:String
+    reservation: [reservation] @hasMany
 
 
 }
