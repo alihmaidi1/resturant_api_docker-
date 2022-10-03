@@ -1,0 +1,27 @@
+
+extend type Mutation {
+
+    addsuggest(description:String): Suggest @validator @guard(with:["user_api"])
+    editsuggest(id:ID,description:String):Suggest @validator @guard(with:["user_api"])
+    deletesuggest(id:ID):Suggest @validator @guard(with:["user_api"])
+}
+
+
+extend type Query{
+
+
+    getallsuggest: [Suggest!] @guard(with:["user_api"])
+
+}
+
+
+type Suggest{
+
+
+    id: ID
+    description: String
+    message: String
+    user: User @belongsTo
+
+
+}

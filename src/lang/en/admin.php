@@ -233,6 +233,11 @@ return [
     "email is not exists in our data"=>"email is not exists in our data",
     "password is required"=>"password is required",
     "the email was send to your account successfully"=>"the email was send to your account successfully",
+    "description is required"=>"description is required",
+    "the suggest was created successfully"=>"the suggest was created successfully",
+    "the suggest was updated successfully"=>"the suggest was updated successfully",
+    "you don't have perrmion to delete this suggest"=>"you don't have perrmion to delete this suggest",
+    "the suggest was deleted successfully"=>"the suggest was deleted successfully",
 
 
 

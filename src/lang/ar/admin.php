@@ -233,6 +233,11 @@ return [
     "email is not exists in our data"=>"هذا البريد الالكتروني غير موجود ضمن بياناتنا",
     "password is required"=>"كلمة المرور مطلوبة",
     "the email was send to your account successfully"=>"تم ارسال رسالة الكود لبريدك الالكتروني",
+    "description is required"=>"الوصف مطلوب",
+    "the suggest was created successfully"=>"تم انشاء الاقتراح بنجاح",
+    "the suggest was updated successfully"=>"تم تعديل الاقتراح بنجاح",
+    "you don't have perrmion to delete this suggest"=>"أنت لا نملك الصلاحيات لحذف الاقتراح",
+    "the suggest was deleted successfully"=>"تم حذف الاقتراح بنجاح",
 
 
 

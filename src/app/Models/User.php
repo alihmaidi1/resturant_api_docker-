@@ -29,5 +29,14 @@ class User extends Authenticatable  implements JWTSubject
     }
 
 
+    public function suggests(){
+
+
+
+        return $this->hasMany("\App\Models\suggest","user_id");
+
+
+    }
+
 
 }

@@ -26,6 +26,8 @@ type User{
     operation_code:String
     message:String
     token_info: Token
+    suggests: Suggest @hasMany
+
 
 }
 type Message{
