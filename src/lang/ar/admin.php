@@ -248,7 +248,7 @@ return [
     "the food in resturant was added to cart successfully"=>"تم اضافة الطعام للسلة بنجاح",
     "you don't have permssion to do this operation"=>"لا تملك الصلاحيات للقيام بهذه العملية",
     "the quantity in this cart was updated successfully"=>"تم تعديل الكمية لهذه السلة بنجاح",
-    "the food was deleted successfully from your cart"=>"تم أزالة هذه الطعام من سلتك بنجاح",
+    "the food was deleted successfully from your cart"=>"تمت أزالة هذه الطعام من سلتك بنجاح",
 
 
 

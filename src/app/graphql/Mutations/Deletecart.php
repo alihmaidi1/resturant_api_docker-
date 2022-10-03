@@ -17,9 +17,7 @@ final class Deletecart
 
         $cart=cart::find($args["id"]);
         if($cart->user_id!=auth("user_api")->user()->id){
-
             throw new CustomException(trans("admin.you don't have permssion to do this operation"));
-
         }else{
 
         $cart1=$cart;
