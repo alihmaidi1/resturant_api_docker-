@@ -1,0 +1,27 @@
+
+extend type Mutation{
+
+    addtocart(resturant_food_id:ID,quantity:Int):Cart @validator @guard(with:["user_api"])
+    editcartquantity(id:ID,quantity:Int):Cart @validator @guard(with:["user_api"])
+    deletecart(id:ID):Cart @validator @guard(with:["user_api"])
+
+}
+
+extend type Query{
+
+    getallcart:[Cart] @guard(with:["user_api"])
+
+
+}
+
+
+
+type Cart{
+
+    id:ID
+    message:String
+    food: Food
+    quantity:Int
+
+
+}

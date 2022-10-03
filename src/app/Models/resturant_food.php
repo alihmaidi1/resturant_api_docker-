@@ -27,5 +27,11 @@ class resturant_food extends Model
         return $this->hasMany("\App\Models\wishlist","resturant_food_id");
     }
 
+    public function carts(){
+
+
+        return $this->hasMany("\App\Models\cart","resturant_food_id");
+    }
+
 
 }

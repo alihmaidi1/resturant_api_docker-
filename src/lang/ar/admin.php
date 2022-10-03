@@ -243,6 +243,12 @@ return [
     "the food was added to wishlist successfully"=>"تم أضافة المنتج لقائمة المفضلة بنجاح",
     "you don't have permmssion to this operaion"=>"أنت لا تملك الصلاحيات لهذا الفعل",
     "the food was deleted from wishlist successfully"=>"تم حذف هذا الطعام من القائمة المفضلة بنجاح",
+    "resturant food id is not exists in our data"=>"معرف هذا الطعام في المطعم غير موجود ضمن بياناتنا",
+    "quantity is required"=>"الكمية مطلوبة",
+    "the food in resturant was added to cart successfully"=>"تم اضافة الطعام للسلة بنجاح",
+    "you don't have permssion to do this operation"=>"لا تملك الصلاحيات للقيام بهذه العملية",
+    "the quantity in this cart was updated successfully"=>"تم تعديل الكمية لهذه السلة بنجاح",
+    "the food was deleted successfully from your cart"=>"تم أزالة هذه الطعام من سلتك بنجاح",
 
 
 

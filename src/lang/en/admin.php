@@ -243,6 +243,12 @@ return [
     "the food was added to wishlist successfully"=>"the food was added to wishlist successfully",
     "you don't have permmssion to this operaion"=>"you don't have permmssion to this operaion",
     "the food was deleted from wishlist successfully"=>"the food was deleted from wishlist successfully",
+    "resturant food id is not exists in our data"=>"resturant food id is not exists in our data",
+    "quantity is required"=>"quantity is required",
+    "the food in resturant was added to cart successfully"=>"the food in resturant was added to cart successfully",
+    "you don't have permssion to do this operation"=>"you don't have permssion to do this operation",
+    "the quantity in this cart was updated successfully"=>"the quantity in this cart was updated successfully",
+    "the food was deleted successfully from your cart"=>"the food was deleted successfully from your cart",
 
 
 
