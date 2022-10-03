@@ -238,6 +238,11 @@ return [
     "the suggest was updated successfully"=>"the suggest was updated successfully",
     "you don't have perrmion to delete this suggest"=>"you don't have perrmion to delete this suggest",
     "the suggest was deleted successfully"=>"the suggest was deleted successfully",
+    "resturant food id is required"=>"resturant food id is required",
+    "resturant food is not exists in our data"=>"resturant food is not exists in our data",
+    "the food was added to wishlist successfully"=>"the food was added to wishlist successfully",
+    "you don't have permmssion to this operaion"=>"you don't have permmssion to this operaion",
+    "the food was deleted from wishlist successfully"=>"the food was deleted from wishlist successfully",
 
 
 

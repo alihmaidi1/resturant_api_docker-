@@ -1,0 +1,21 @@
+extend type Mutation {
+
+    addwishlist(resturant_food_id:Int):Wishlist @validator @guard(with:["user_api"])
+    deletewishlist(id:ID):Wishlist @validator @guard(with:["user_api"])
+
+}
+
+extend type Query{
+
+    getallwishlist:[Wishlist] @guard(with:["user_api"])
+}
+
+
+type Wishlist{
+
+    id:ID
+    message:String
+    food:Food
+
+
+}

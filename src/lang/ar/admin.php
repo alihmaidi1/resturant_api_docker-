@@ -238,6 +238,11 @@ return [
     "the suggest was updated successfully"=>"تم تعديل الاقتراح بنجاح",
     "you don't have perrmion to delete this suggest"=>"أنت لا نملك الصلاحيات لحذف الاقتراح",
     "the suggest was deleted successfully"=>"تم حذف الاقتراح بنجاح",
+    "resturant food id is required"=>"معرف الطعام في المطعم مطلوب",
+    "resturant food is not exists in our data"=>"الطعام في هذا المطعم غير موجود في بياناتنا",
+    "the food was added to wishlist successfully"=>"تم أضافة المنتج لقائمة المفضلة بنجاح",
+    "you don't have permmssion to this operaion"=>"أنت لا تملك الصلاحيات لهذا الفعل",
+    "the food was deleted from wishlist successfully"=>"تم حذف هذا الطعام من القائمة المفضلة بنجاح",
 
 
 
