@@ -232,6 +232,7 @@ return [
     "the profile was updated successfully"=>"the profile was updated successfully",
     "email is not exists in our data"=>"email is not exists in our data",
     "password is required"=>"password is required",
+    "the email was send to your account successfully"=>"the email was send to your account successfully",
 
 
 

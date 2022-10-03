@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\api\admin\account\changepassword as changepasswordRequest;
+use Illuminate\Http\Request;
 
 class Account extends Controller
 {
@@ -44,6 +45,24 @@ class Account extends Controller
 
     }
 
+
+
+    public function changeuserpassword(Request $request,$token){
+
+
+        try{
+
+            $user=auth("reset_user_password")->user();
+
+                return redirect(env("front_base_url")."/reset-user-password/$token");
+            }catch(\Exception $ex){
+
+                abort(404);
+            }
+
+
+
+    }
 
 
 

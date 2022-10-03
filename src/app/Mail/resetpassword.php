@@ -17,10 +17,13 @@ class resetpassword extends Mailable
      * @return void
      */
     public $code;
-    public function __construct($code)
+
+    public $type;
+    public function __construct($code,$type)
     {
 
         $this->code=$code;
+        $this->type=$type;
 
     }
 
@@ -32,6 +35,6 @@ class resetpassword extends Mailable
     public function build()
     {
 
-        return $this->view('api.admin.password.reset',["code"=>$this->code]);
+        return $this->view('api.admin.password.reset',["code"=>$this->code,"type"=>$this->type]);
     }
 }

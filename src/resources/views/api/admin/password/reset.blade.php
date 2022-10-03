@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <div>hello user you can reset password from <a href= {{ env("APP_URL")."/api/admin/changepassword/".$code }}>here</a></div>
+   <div>hello user you can reset password from <a href= {{ env("APP_URL")."/api/$type/changepassword/$code" }}>here</a></div>
 
 
 </body>

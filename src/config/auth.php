@@ -36,10 +36,6 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
 
         'api' => [
             'driver' => 'passport',
@@ -51,6 +47,10 @@ return [
             'driver' => 'passport',
             'provider' => 'users',
         ],
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
 
 
 
@@ -58,6 +58,16 @@ return [
             'driver' => 'jwt',
             'provider' => 'admins',
         ],
+
+
+
+        'reset_user_password' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ],
+
+
+
 
         'api_web' => [
             'driver' => 'session',

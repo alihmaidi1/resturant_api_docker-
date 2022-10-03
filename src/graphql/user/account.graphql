@@ -7,6 +7,10 @@ extend type Mutation {
     edituserprofile(id:ID,name:String,copon_notification:Int): User @validator @guard(with:["user_api"])
     loginuser(email:String,password:String):User @validator
     logoutuser:User @guard(with:["user_api"])
+    sendmailuser(email:String):Message @validator
+    changeuserpassword(password:String): User @validator @guard(with:"reset_user_password")
+
+
 }
 
 

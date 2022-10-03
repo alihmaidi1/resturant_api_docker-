@@ -13,8 +13,9 @@ final class Logoutuser
     public function __invoke($_, array $args)
     {
         $user=Auth::guard("user_api")->user();
+        $user->token()->refoke();
         $user->message=trans("admin.you are logout successfully");
-        $user->token()->revoke();
+
         return $user;
 
 

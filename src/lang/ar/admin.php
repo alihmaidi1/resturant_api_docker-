@@ -232,6 +232,7 @@ return [
     "the profile was updated successfully"=>"تم تعديل معلومات الملف الشخصي بنجاح",
     "email is not exists in our data"=>"هذا البريد الالكتروني غير موجود ضمن بياناتنا",
     "password is required"=>"كلمة المرور مطلوبة",
+    "the email was send to your account successfully"=>"تم ارسال رسالة الكود لبريدك الالكتروني",
 
 
 
