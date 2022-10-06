@@ -1,28 +1,31 @@
-var express = require("express");
-var http = require("http");
-var socket = require("socket.io");
-
+const express = require("express");
+const http = require("http");
+const socketServer = require("./socket");
+const socket = require("socket.io");
 class Server {
 
-    constructor() {
 
+
+    constructor() {
         this.app = express();
         this.port = 5000;
         this.host = "localhost";
         this.server = http.createServer(this.app);
-
     }
 
     runServer() {
 
-        this.server.listen(this.port, this.host, () => {
-
-            console.log("the server is running")
+        let listen = this.server.listen(this.port, this.host, () => {
+            console.log("the serever is running")
         });
+        let io = socket(listen);
+        new socketServer(io);
+
+
 
     }
 
 }
 
-var app = new Server();
+const app = new Server();
 app.runServer()
