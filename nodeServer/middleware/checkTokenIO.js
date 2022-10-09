@@ -1,5 +1,4 @@
 const axios = require("axios");
-
 module.exports = (socket, next) => {
     let token = socket.handshake.query.token;
     let type = socket.handshake.query.type;
@@ -11,7 +10,7 @@ module.exports = (socket, next) => {
     } else {
 
         let url = (type == 1) ? "user" : "admin";
-        axios.post("http://host.docker.internal:9001/api/" + url + "/checkToken", undefined, {
+        axios.post(process.env.LARAVEL_SERVER + "/api/" + url + "/checkToken", undefined, {
 
             headers: {
                 Authorization: `Bearer ${token}`

@@ -3,6 +3,8 @@ const db = require("./util/database");
 const checkTokenIO = require("./middleware/checkTokenIO");
 const SendUserMessage = require("./middleware/sendUserMessage");
 const SendResturantMessage = require("./middleware/sendResturantMessage");
+const ChatModel = require("./models/chat");
+const ChatDB = new ChatModel();
 module.exports = class socket {
     constructor(io) {
 
@@ -39,48 +41,38 @@ module.exports = class socket {
 
         socket.use(SendResturantMessage).on("sendResturantMessage", (data) => {
 
+            let count = ChatDB.getCountChat(data.resturantId, data.id);
+            console.log(count);
 
-            let room = db.execute(`select count(*) as count1 from chats where resturant_id=${data.resturantId} and user_id=${user.id}`).then((res) => {
-
-                let count = res[0][0].count1;
-                console.log(count)
-                if (count == 0) {
-
-                    db.execute(`insert into chats(resturant_id,user_id) values(${data.resturantId},${user.id})`).then((response) => {
-                        let id = response[0].insertId;
-                        console.log(helper.getCurrentTimestamp())
-                        db.execute(`insert into messages(chat_id,content,sendBy,created_at) values(${id},${data.message},1,"${helper.getCurrentTimestamp()}")`).then((responsee) => {
-
-
-                        }).catch((error) => {
-
-                            console.log("error34")
-
-                        })
+            if (count == 0) {
+                db.execute(`insert into chats(resturant_id,user_id) values(${data.resturantId},${user.id})`).then((response) => {
+                    let id = response[0].insertId;
+                    console.log(helper.getCurrentTimestamp())
+                    db.execute(`insert into messages(chat_id,content,sendBy,created_at) values(${id},${data.message},1,"${helper.getCurrentTimestamp()}")`).then((responsee) => {
 
 
                     }).catch((error) => {
 
-
-                        console.log("error3434")
+                        console.log("error34")
 
                     })
 
 
+                }).catch((error) => {
 
 
-                } else {
+                    console.log("error3434")
+
+                })
 
 
-                }
 
 
+            } else {
 
-            }).catch((err) => {
 
-                console.log("error223")
+            }
 
-            })
 
 
 
@@ -103,12 +95,9 @@ module.exports = class socket {
         socket.use(SendUserMessage).on("sendUserMessage", (data) => {
 
             let room = db.execute(`select count(*) as count1 from chats where resturant_id=${data.resturantId} and user_id=${user.id}`)
-
             room.then((res) => {
-
                 let count = res[0][0].count1;
 
-                console.log(count)
                 if (count == 0) {
 
                     db.execute(`insert into chats(resturant_id,user_id) values(${data.resturantId},${user.id})`).then((response) => {

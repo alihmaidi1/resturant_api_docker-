@@ -2,13 +2,14 @@ const express = require("express");
 const http = require("http");
 const socket = require("socket.io");
 const socketClass = require("./socket");
+require("dotenv").config();
 class Server {
 
     constructor() {
 
         this.app = express();
-        this.port = 5000;
-        this.host = "localhost";
+        this.port = process.env.APP_PORT;
+        this.host = process.env.APP_HOST;
         this.http = http.createServer(this.app);
         this.socket = socket(this.http, {
 
