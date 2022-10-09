@@ -39,44 +39,20 @@ module.exports = class socket {
 
     runResturantMessage(socket, user) {
 
-        socket.use(SendResturantMessage).on("sendResturantMessage", (data) => {
-
-            let count = ChatDB.getCountChat(data.resturantId, data.id);
-            console.log(count);
-
-            if (count == 0) {
-                db.execute(`insert into chats(resturant_id,user_id) values(${data.resturantId},${user.id})`).then((response) => {
-                    let id = response[0].insertId;
-                    console.log(helper.getCurrentTimestamp())
-                    db.execute(`insert into messages(chat_id,content,sendBy,created_at) values(${id},${data.message},1,"${helper.getCurrentTimestamp()}")`).then((responsee) => {
+        socket.use(SendResturantMessage).on("sendResturantMessage", async(data) => {
 
 
-                    }).catch((error) => {
-
-                        console.log("error34")
-
-                    })
-
-
-                }).catch((error) => {
-
-
-                    console.log("error3434")
-
-                })
-
-
-
-
+            let chatNumber = await ChatModel.getCountChat(user.id, data.id);
+            if (chatNumber == 0) {
+                let chat = await ChatModel.insertChat(user.id, data.id);
+                let message = await messageModel.insertMessage(chat.id, data.message, 1);
             } else {
 
+                let chats = await ChatModel.getAllChat(user.id, data.id);
+                let firstChatId = chats[0].id;
+                let message = await messageModel.insertMessage(firstChatId, data.message, 1);
 
             }
-
-
-
-
-
 
 
 
