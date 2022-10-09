@@ -4,7 +4,7 @@ const checkTokenIO = require("./middleware/checkTokenIO");
 const SendUserMessage = require("./middleware/sendUserMessage");
 const SendResturantMessage = require("./middleware/sendResturantMessage");
 const ChatModel = require("./models/chat");
-const ChatDB = new ChatModel();
+const messageModel = require("./models/message");
 module.exports = class socket {
     constructor(io) {
 
@@ -92,58 +92,19 @@ module.exports = class socket {
 
     runUserSendMessage(socket, user) {
 
-        socket.use(SendUserMessage).on("sendUserMessage", (data) => {
+        socket.use(SendUserMessage).on("sendUserMessage", async(data) => {
 
-            let room = db.execute(`select count(*) as count1 from chats where resturant_id=${data.resturantId} and user_id=${user.id}`)
-            room.then((res) => {
-                let count = res[0][0].count1;
+            let chatNumber = await ChatModel.getCountChat(data.resturantId, user.id);
+            if (chatNumber == 0) {
+                let chat = await ChatModel.insertChat(data.resturantId, user.id);
+                let message = await messageModel.insertMessage(chat.id, data.message, 0);
+            } else {
 
-                if (count == 0) {
+                let chats = await ChatModel.getAllChat(data.resturantId, user.id);
+                let firstChatId = chats[0].id;
+                let message = await messageModel.insertMessage(firstChatId, data.message, 0);
 
-                    db.execute(`insert into chats(resturant_id,user_id) values(${data.resturantId},${user.id})`).then((response) => {
-
-                        let id = response[0].insertId;
-                        console.log(helper.getCurrentTimestamp())
-                        db.execute(`insert into messages(chat_id,content,sendBy,created_at) values(${id},${data.message},0,"${helper.getCurrentTimestamp()}")`).then((res) => {
-
-                            console.log("done11")
-                        }).catch((err) => {
-
-                            console.log(err)
-                        })
-
-                    }).catch((err) => {
-
-                        console.log(err)
-                    })
-
-
-                } else {
-
-                    db.execute(`select * from chats where resturant_id=${data.resturantId} and user_id=${user.id}`).then((res) => {
-
-                        let chatId = res[0][0].id;
-
-                        db.execute(`insert into messages(chat_id,content,sendBy,created_at,updated_at) values(${chatId},${data.message},0,"${helper.getCurrentTimestamp()}","${helper.getCurrentTimestamp()}")`).then((res) => {
-
-                            console.log(res)
-                        }).catch((err) => {
-
-                            console.log(err)
-                        })
-
-
-
-                    }).catch((err) => {
-
-                        console.log("error")
-                    })
-
-
-                }
-            })
-
-
+            }
 
 
         })
