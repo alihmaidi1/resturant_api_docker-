@@ -21,6 +21,7 @@ class Server {
 
     runServer() {
 
+        console.log("ss")
         new socketClass(this.socket).runEvents();
         let server = this.http.listen(this.port, this.host, () => {
             console.log(`the server is run in port ${this.port}`)
