@@ -1,31 +1,36 @@
 const express = require("express");
 const http = require("http");
-const socketServer = require("./socket");
 const socket = require("socket.io");
+const socketClass = require("./socket");
 class Server {
 
-
-
     constructor() {
+
         this.app = express();
         this.port = 5000;
         this.host = "localhost";
-        this.server = http.createServer(this.app);
+        this.http = http.createServer(this.app);
+        this.socket = socket(this.http, {
+
+            cors: {
+                origin: "*"
+            }
+
+        });
     }
 
     runServer() {
 
-        let listen = this.server.listen(this.port, this.host, () => {
-            console.log("the serever is running")
-        });
-        let io = socket(listen);
-        new socketServer(io);
-
+        new socketClass(this.socket).runEvents();
+        let server = this.http.listen(this.port, this.host, () => {
+            console.log(`the server is run in port ${this.port}`)
+        })
 
 
     }
 
+
+
 }
 
-const app = new Server();
-app.runServer()
+module.exports = Server;

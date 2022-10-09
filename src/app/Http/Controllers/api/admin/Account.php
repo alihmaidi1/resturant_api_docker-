@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\api\admin\account\changepassword as changepasswordRequest;
+use App\Models\message;
 use Illuminate\Http\Request;
 
 class Account extends Controller
@@ -65,8 +66,22 @@ class Account extends Controller
     }
 
 
+    public function checkusertoken(Request $request){
+
+        $user=auth('user_api')->user();
+        return $user;
+
+    }
 
 
+    public function checkAdminToken(Request$request){
+
+
+        $admin=auth("api")->user();
+
+        return $admin;
+
+    }
 
 
 

@@ -16,3 +16,10 @@ use \App\Http\Controllers\paypal;
 */
 Route::get("/paypal_success",[paypal::class,"success"]);
 
+Route::get("/hello",function(){
+
+    return view("test");
+
+});
+
+

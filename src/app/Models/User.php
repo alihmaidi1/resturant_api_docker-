@@ -55,4 +55,12 @@ class User extends Authenticatable  implements JWTSubject
         return $this->hasMany("\App\Models\cart","user_id");
     }
 
+
+
+    public function chats(){
+
+        return $this->hasMany("\App\Models\chat","user_id");
+    }
+
+
 }

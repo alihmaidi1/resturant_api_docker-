@@ -40,5 +40,11 @@ class resturant extends Model
     }
 
 
+
+    public function chats(){
+
+        return $this->hasMany("\App\Models\chat","resturant_id");
+    }
+
 }
 

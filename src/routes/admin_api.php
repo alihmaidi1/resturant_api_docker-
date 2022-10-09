@@ -11,6 +11,7 @@ Route::group(["prefix"=>"admin"], function(){
 
         Route::group(['middleware'=>['auth:api']],function(){
 
+            Route::post("/checkToken",[Account::class,"checkAdminToken"]);
 
 
         });
