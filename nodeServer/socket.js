@@ -1,5 +1,3 @@
-const helper = require("./util/helper");
-const db = require("./util/database");
 const checkTokenIO = require("./middleware/checkTokenIO");
 const SendUserMessage = require("./middleware/sendUserMessage");
 const SendResturantMessage = require("./middleware/sendResturantMessage");
@@ -23,12 +21,12 @@ module.exports = class socket {
         this.io.use(checkTokenIO)
         this.io.on("connection", (socket) => {
 
-
+            console.log(socket.id)
             if (socket.type == 1) { //user account
                 this.runUserSendMessage(socket, socket.user)
             } else { //resturant account
 
-                this.runResturantMessage(socket, socket.user)
+                this.runResturantSendMessage(socket, socket.user)
 
             }
 
@@ -36,21 +34,20 @@ module.exports = class socket {
 
     }
 
-
-    runResturantMessage(socket, user) {
-
+    runResturantSendMessage(socket, user) {
         socket.use(SendResturantMessage).on("sendResturantMessage", async(data) => {
-
-
-            let chatNumber = await ChatModel.getCountChat(user.id, data.id);
+            let chatNumber = await ChatModel.getCountChat(user.id, data.userId);
             if (chatNumber == 0) {
-                let chat = await ChatModel.insertChat(user.id, data.id);
+                let chat = await ChatModel.insertChat(user.id, data.userId);
                 let message = await messageModel.insertMessage(chat.id, data.message, 1);
+                socket.to("user_" + data.userId).emit("new message", message)
+
             } else {
 
-                let chats = await ChatModel.getAllChat(user.id, data.id);
+                let chats = await ChatModel.getAllChat(user.id, data.userId);
                 let firstChatId = chats[0].id;
                 let message = await messageModel.insertMessage(firstChatId, data.message, 1);
+                socket.to("user_" + data.userId).emit("new message", message)
 
             }
 
@@ -74,11 +71,13 @@ module.exports = class socket {
             if (chatNumber == 0) {
                 let chat = await ChatModel.insertChat(data.resturantId, user.id);
                 let message = await messageModel.insertMessage(chat.id, data.message, 0);
+                socket.to("admin_" + data.resturantId).emit("new message", message)
             } else {
 
                 let chats = await ChatModel.getAllChat(data.resturantId, user.id);
                 let firstChatId = chats[0].id;
                 let message = await messageModel.insertMessage(firstChatId, data.message, 0);
+                socket.to("admin_" + data.resturantId).emit("new message", message)
 
             }
 

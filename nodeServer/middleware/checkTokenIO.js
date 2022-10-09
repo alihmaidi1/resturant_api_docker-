@@ -21,6 +21,7 @@ module.exports = (socket, next) => {
 
             socket.user = res.data;
             socket.type = type;
+            socket.id = ((type == 1) ? "user_" : "admin_") + res.data.id
             next()
 
         }).catch((err) => {
