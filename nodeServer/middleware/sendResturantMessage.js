@@ -1,14 +1,17 @@
-module.exports = (socket, next) => {
+const resturantSendMessageValidation = require("../validation/resturantSendMessage");
+module.exports = async(socket, next) => {
+    let userId = socket[1].userId;
+    let message = socket[1].message;
+    let { error } = await resturantSendMessageValidation.validateAsync({ userId, message });
 
-    if (socket[1].userId == undefined || socket[1].message == undefined) {
+    if (error) {
 
-        next(new Error("UserId Or Message Is Not Correct"));
-
-    } else {
+        return next(new Error(error.message));
 
 
-        next()
     }
+
+    return next();
 
 
 }

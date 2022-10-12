@@ -1,43 +1,45 @@
 const axios = require("axios");
+const checkTokenValidation = require("../validation/checkTokenValidation");
 module.exports = (socket, next) => {
     let token = socket.handshake.query.token;
     let type = socket.handshake.query.type;
-    if (token == undefined || (type != 1 && type != 2)) {
+    let { error } = checkTokenValidation.validate({ token, type });
 
-        next(new Error("Token Or Type Connection is Not Correct"));
+    if (error) {
 
-
-    } else {
-
-        let url = (type == 1) ? "user" : "admin";
-        axios.post(process.env.LARAVEL_SERVER + "/api/" + url + "/checkToken", undefined, {
-
-            headers: {
-                Authorization: `Bearer ${token}`
-
-            }
-
-        }).then((res) => {
-
-            socket.user = res.data;
-            socket.type = type;
-            socket.id = ((type == 1) ? "user_" : "admin_") + res.data.id
-            next()
-
-        }).catch((err) => {
-
-
-            next(new Error("Token Error"));
-
-
-        })
-
-
-
-
-
+        next(new Error(error.message));
 
     }
+
+    let url = (type == 1) ? "user" : "admin";
+    axios.post(process.env.LARAVEL_SERVER + "/api/" + url + "/checkToken", undefined, {
+
+        headers: {
+            Authorization: `Bearer ${token}`
+
+        }
+
+    }).then((res) => {
+
+        socket.user = res.data;
+        socket.type = type;
+        socket.id = ((type == 1) ? "user_" : "admin_") + res.data.id
+        next()
+
+    }).catch((err) => {
+
+
+        next(new Error("Token Error"));
+
+
+    })
+
+
+
+
+
+
+
 
 
 
