@@ -24,6 +24,7 @@ type Resturant{
     storehouses:[storehouse] @hasMany
     tables: [table] @hasMany
     foodinresturant:[Foodinresturant!] @hasMany
+    chats: [Chat] @hasMany
 }
 
 
@@ -36,6 +37,8 @@ type Resturant_without_message{
     name:String
     employees:[Employee] @hasMany
     foods:[Food] @belongsToMany
+    chats: [Chat] @hasMany
+
 }
 
 

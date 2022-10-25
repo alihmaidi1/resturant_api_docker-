@@ -4,7 +4,7 @@ class message {
 
     insertMessage(chatId, content, sendBy) {
 
-        return db.execute(`insert into messages(chat_id,content,sendBy,created_at,updated_at) values(${chatId},${content},${sendBy},"${helper.getCurrentTimestamp()}","${helper.getCurrentTimestamp()}")`).then(async(res) => {
+        return db.execute(`insert into messages(chat_id,content,sendBy,created_at,updated_at) values(${chatId},"${content}",${sendBy},"${helper.getCurrentTimestamp()}","${helper.getCurrentTimestamp()}")`).then(async(res) => {
 
             let id = res[0].insertId;
 
@@ -16,14 +16,14 @@ class message {
 
             }).catch((err) => {
 
-                throw new Error("We Have Error");
+                throw new Error(err);
 
             })
 
 
         }).catch((err) => {
 
-            throw new Error("we Have Error");
+            throw new Error(err);
 
         })
 

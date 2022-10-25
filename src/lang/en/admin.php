@@ -249,7 +249,7 @@ return [
     "you don't have permssion to do this operation"=>"you don't have permssion to do this operation",
     "the quantity in this cart was updated successfully"=>"the quantity in this cart was updated successfully",
     "the food was deleted successfully from your cart"=>"the food was deleted successfully from your cart",
-
+    "the message status was updated successfully"=>"the message status was updated successfully"
 
 
 

@@ -13,17 +13,15 @@ class role extends Model
     public $fillable=["name","permssion"];
     public $hidden=["created_at","updated_at"];
     public $translatable = ['name'];
+
     public function admins(){
         return $this->hasMany("App\Models\admin","role_id");
-
     }
 
 
 
     public function getPermssionAttribute($value){
-
         return json_decode($value);
-
     }
 
 }

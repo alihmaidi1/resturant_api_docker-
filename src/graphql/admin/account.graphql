@@ -1,6 +1,4 @@
-
 extend type Query{
-
     getalladmin:[Admin!] @all @guard
     getpermission:PermissionArray @guard
     me:Admin @guard

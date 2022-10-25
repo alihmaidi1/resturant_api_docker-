@@ -27,7 +27,7 @@ type User{
     message:String
     token_info: Token
     suggests: Suggest @hasMany
-
+    chats: [Chat] @hasMany
 
 }
 type Message{

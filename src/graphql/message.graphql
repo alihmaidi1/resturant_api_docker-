@@ -1,0 +1,26 @@
+extend type Query{
+
+    getresturantmessage(resturant_id:ID):[Message] @guard(with:["user_api"]) @validator
+
+}
+
+extend type Mutation{
+
+    changeusermessagestatus(resturant_id:ID): messagestatus @guard(with:["user_api"]) @validator
+
+}
+
+type messagestatus{
+
+    message:String
+}
+type Message{
+
+    id:ID
+    content: String
+    status: Int
+    sendBy: String
+    chat: Chat @belongsTo
+    created_at: String
+
+}
