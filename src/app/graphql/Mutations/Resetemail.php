@@ -1,9 +1,10 @@
 <?php
 
 namespace App\GraphQL\Mutations;
+
+use App\Mail\resetemail as MailResetemail;
 use App\Models\admin;
 use Mail;
-use \App\Mail\resetpassword ;
 
 final class Resetemail
 {
@@ -16,9 +17,13 @@ final class Resetemail
 
         $admin=admin::where("email",$args['email'])->first();
         $token=auth("reset_password")->login($admin);
-        Mail::to($args['email'])->send(new resetpassword($token,"admin"));
+        $number=rand(100000,999999);
+        $admin->reset_code=$number;
+        $admin->save();
+        Mail::to($args['email'])->send(new MailResetemail($number));
         $messages = new \stdClass();
         $messages->message=trans("admin.the Email Was Send To You Successfully");
+        $messages->token=$token;
         return $messages;
     }
 }

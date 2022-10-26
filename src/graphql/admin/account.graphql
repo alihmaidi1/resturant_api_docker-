@@ -8,12 +8,13 @@ extend type Mutation{
 
     login(email:String,password:String):Admin!   @validator
     token(your_refresh_token: String!): Token!
-    resetemail(email:String):Message @validator
+    resetemail(email:String):Message1 @validator
     logout:Admin @guard
     createadmin(name:String,email:String,password:String,role_id:ID,employee_id:ID):Admin @guard @validator
     deleteadmin(id:ID):Admin @guard @validator
     admininfo(id:ID):Admin @guard @validator
     changepassword(password:String):Admin @validator @guard(with:["reset_password"])
+    checkresetcode(code:String):Message1 @validator @guard(with:["reset_password"])
 }
 
 
@@ -49,8 +50,8 @@ type PermissionArray{
 
 }
 
-type Message{
+type Message1{
 
     message: String
-
+    token: String
 }

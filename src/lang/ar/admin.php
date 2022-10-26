@@ -250,6 +250,7 @@ return [
     "the quantity in this cart was updated successfully"=>"تم تعديل الكمية لهذه السلة بنجاح",
     "the food was deleted successfully from your cart"=>"تمت أزالة هذه الطعام من سلتك بنجاح",
     "the message status was updated successfully"=>"تم تغير حالة الرسائل بنجاح",
+    "the code is correct"=>"الرمز صحيح",
 
 
 

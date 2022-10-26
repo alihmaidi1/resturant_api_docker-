@@ -1,6 +1,7 @@
 <?php
 
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
     function getTotalPrice($time1,$time2,$price){
 
@@ -46,3 +47,22 @@
         $newContent = implode('', $newLines);
         file_put_contents($envFile, $newContent);
     }
+
+
+    function tokenInfo($email,$password){
+
+        $client=DB::table('oauth_clients')->first();
+
+        return Http::asForm()->post(env("APP_URL")."/oauth/token",[
+                'grant_type' => 'password',
+                'client_id' =>$client->id,
+                'client_secret' => $client->secret ,
+                'username' => $email,
+                'password' => $password,
+
+        ]);
+
+
+    }
+
+
