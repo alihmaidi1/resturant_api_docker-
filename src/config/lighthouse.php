@@ -174,7 +174,9 @@ return [
         'models' => ['App', 'App\\Models'],
         'queries' =>[
             'App\\GraphQL\\Queries',
-            "App\\GraphQL\\Queries\\Admin\\account"
+            "App\\GraphQL\\Queries\\Admin\\account",
+            "App\\GraphQL\\Queries\\Admin\\role"
+
 
 
         ] ,
@@ -182,6 +184,8 @@ return [
         'mutations' => [
 
             "App\\GraphQL\\Mutations\\Admin\\account",
+            "App\\GraphQL\\Mutations\\Admin\\role",
+
             "App\\GraphQL\\Mutations",
 
         ],

@@ -1,7 +1,6 @@
 extend type Query{
     getalladmin:[Admin!]  @guard @can(ability:"admin")
     me:Admin @guard
-
     getpermission:PermissionArray @guard
 }
 

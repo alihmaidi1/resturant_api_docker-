@@ -16,7 +16,6 @@ final class Getpermission
         $values=[];
         foreach($arr as $key=>$value){
             $keys[]=$key;
-            // $arr1[$key]=$value[Config::get('app.locale')];
             $values[]=$value[Config::get('app.locale')];
         }
         $val=new stdClass();

@@ -32,7 +32,6 @@ class adminPolicy
 
             return true;
         }
-
         $admin2=admin::find($injected["id"]);
         if($admin2->resturant_id==$admin->resturant_id && $admin2->rank < $admin->rank){
 
