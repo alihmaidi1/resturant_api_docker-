@@ -14,9 +14,9 @@ final class CreateadminValidator extends Validator
 
             "email"=>["required","email","unique:admins,email"],
             "password"=>["required"],
-            "role_id"=>["exists:roles,id","required","not_in:1"],
-            "employee_id"=>["exists:employees,id","required","unique:admins,employee_id"],
-
+            "role_id"=>["exists:roles,id","required"],
+            "resturant_id"=>["required","exists:resturants,id"],
+            "rank"=>["required"]
 
         ];
     }
@@ -31,10 +31,9 @@ final class CreateadminValidator extends Validator
             "password.required"=>trans("admin.password field is required"),
             "role_id.exists"=>trans("admin.the role is not found in our data"),
             "role_id.required"=>trans("admin.the role is required"),
-            "employee_id.exists"=>trans("admin.the employee is not found in our data"),
-            "employee_id.required"=>trans("admin.the employee is required"),
-            "employee_id.unique"=>trans("admin.the employee already has admin account"),
-            "role_id.not_in"=>trans("admin.this role for one admin")
+            "resturant_id.exists"=>trans("admin.resturant id is not exists in our data"),
+            "rank.required"=>trans("admin.rank is required")
+
         ];
     }
 

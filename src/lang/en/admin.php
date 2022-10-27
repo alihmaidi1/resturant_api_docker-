@@ -250,8 +250,13 @@ return [
     "the quantity in this cart was updated successfully"=>"the quantity in this cart was updated successfully",
     "the food was deleted successfully from your cart"=>"the food was deleted successfully from your cart",
     "the message status was updated successfully"=>"the message status was updated successfully",
-    "the code is correct"=>"the code is correct"
-
+    "the code is correct"=>"the code is correct",
+    "rank is required"=>"rank is required",
+    "the email was updated successfully"=>"the email was updated successfully",
+    "role id is required"=>"role id is required",
+    "role id is not exists in our data"=>"role id is not exists in our data",
+    "the admin was updated successfully"=>"the admin was updated successfully",
+    "this role for super admin"=>"this role for super admin"
 
 
 

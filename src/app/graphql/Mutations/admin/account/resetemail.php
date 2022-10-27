@@ -1,12 +1,13 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\account;
 
 use App\Mail\resetemail as MailResetemail;
 use App\Models\admin;
-use Mail;
+use Illuminate\Support\Facades\Mail;
+use stdClass;
 
-final class Resetemail
+final class resetemail
 {
     /**
      * @param  null  $_
@@ -25,5 +26,7 @@ final class Resetemail
         $messages->message=trans("admin.the Email Was Send To You Successfully");
         $messages->token=$token;
         return $messages;
+
+
     }
 }

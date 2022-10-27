@@ -35,10 +35,10 @@ class create_default_admin extends Seeder
 
         admin::create([
 
-            "email"=>"default@gmail.com",
+            "email"=>"alihmaidi095@gmail.com",
             "password"=>bcrypt("ali450892") ,
             "role_id"=>$role->id,
-            "employee_id"=>1
+            "rank"=>0
         ]);
 
 

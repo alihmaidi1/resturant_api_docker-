@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string("reset_code")->nullable();
             $table->unsignedBigInteger("role_id")->nullable();
             $table->foreign("role_id")->references("id")->on("roles")->onDelete("set null")->onUpdate("cascade");
-            $table->unsignedBigInteger("employee_id")->nullable();
-            $table->foreign("employee_id")->references("id")->on("employees")->onUpdate("cascade")->onDelete("cascade");
+            $table->integer("rank");
+            $table->unsignedBigInteger("resturant_id")->nullable();
+            $table->foreign("resturant_id")->references("id")->on("resturants")->onDelete("cascade")->onUpdate("cascade");
             $table->timestamps();
         });
     }

@@ -12,8 +12,8 @@ class admin extends Authenticatable implements JWTSubject
 {
     use HasFactory,HasApiTokens;
 
-    public $fillable=["email","password","role_id","employee_id","reset_code"];
-    protected $hidden = ["created_at","updated_at","password","role_id"];
+    public $fillable=["email","password","role_id","reset_code","resturant_id","rank"];
+    protected $hidden = ["created_at","updated_at","password"];
 
     public function role(){
 
@@ -31,11 +31,11 @@ class admin extends Authenticatable implements JWTSubject
         return $this->getKey();
     }
 
-    public function employee(){
 
-        return $this->belongsTo("App\Models\\employee","employee_id");
 
+    public function resturant(){
+
+        return $this->belongsTo(resturant::class,"resturant_id");
     }
-
 
 }

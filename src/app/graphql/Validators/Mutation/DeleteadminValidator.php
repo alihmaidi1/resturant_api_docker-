@@ -15,7 +15,7 @@ final class DeleteadminValidator extends Validator
     {
         return [
 
-            "id"=>["required","not_in:1"]
+            "id"=>["required","not_in:1","exists:admins,id"]
 
         ];
     }
@@ -25,7 +25,8 @@ final class DeleteadminValidator extends Validator
         return [
 
             "id.required"=>trans("admin.id field is required"),
-            "id.not_in"=>trans("admin.you can't delete root admin")
+            "id.not_in"=>trans("admin.you can't delete root admin"),
+            "id.exists"=>trans("admin.id is not exists in our data")
         ];
     }
 }

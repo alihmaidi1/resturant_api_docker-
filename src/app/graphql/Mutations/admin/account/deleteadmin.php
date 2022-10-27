@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\account;
+
 use App\Models\admin;
-final class Deleteadmin
+
+final class deleteadmin
 {
     /**
      * @param  null  $_
@@ -15,9 +17,9 @@ final class Deleteadmin
         $admin1=$admin;
         $admin1->role;
         $admin1->message=trans("admin.the admin was deleted successfully");
-        $admin1->employee;
         $admin->delete();
         return $admin1;
+
 
     }
 }

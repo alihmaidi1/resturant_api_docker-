@@ -53,12 +53,4 @@ class employee extends Model
 
     }
 
-
-    public function admin(){
-
-        return $this->hasOne("App\Models\admin","employee_id");
-
-
-    }
-
 }

@@ -1,13 +1,11 @@
 <?php
 
-
 return [
 
 
     "permssion"=>[
-
-
-        "category"=>["en"=>"controll in Categories","ar"=>"التحكم في الاصناف"],
+        "category"=>["en"=>"Controll in Categories","ar"=>"التحكم في الاصناف"],
+        "admin"=>["en"=>"Controll in Admins","ar"=>"التحكم في الادمن"],
         "role"=>["en"=>"Controll in Roles","ar"=>"التحكم في الصلاحيات"],
         "resturant"=>["en"=>"Controll in Resturants","التحكم في المطاعم"],
         "tabletype"=>["en"=>"Controll in Table Types","ar"=>"التحكم في أنواع الطاولات"],

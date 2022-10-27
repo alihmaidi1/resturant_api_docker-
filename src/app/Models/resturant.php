@@ -46,5 +46,12 @@ class resturant extends Model
         return $this->hasMany("\App\Models\chat","resturant_id");
     }
 
+
+    public function admins(){
+
+        return $this->hasMany(admin::class,"resturant_id");
+    }
+
+
 }
 

@@ -28,5 +28,4 @@ type Employee{
     employees: [Employee] @hasMany
     job:Job @belongsTo
     experience:Experience @belongsTo
-    admin:Admin @hasOne
 }

@@ -172,7 +172,13 @@ return [
 
     'namespaces' => [
         'models' => ['App', 'App\\Models'],
-        'queries' => 'App\\GraphQL\\Queries',
+        'queries' =>[
+            'App\\GraphQL\\Queries',
+            "App\\GraphQL\\Queries\\Admin\\account"
+
+
+        ] ,
+
         'mutations' => [
 
             "App\\GraphQL\\Mutations\\Admin\\account",

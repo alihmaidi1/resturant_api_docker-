@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\account;
 use App\Models\admin;
 use Illuminate\Support\Facades\Hash;
 
-final class Createadmin
+final class createadmin
 {
     /**
      * @param  null  $_
@@ -17,12 +17,12 @@ final class Createadmin
             "email"=>$args["email"],
             "password"=>Hash::make($args["password"]),
             "role_id"=>$args["role_id"],
-            "employee_id"=>$args["employee_id"]
+            "resturant_id"=>$args["resturant_id"],
+            "rank"=>$args["rank"]
         ]);
         $admin->rule;
-        $admin->employee;
-        $admin->message=trans("admin.the admin was created successfully");
         $admin->resturant;
+        $admin->message=trans("admin.the admin was created successfully");
         return $admin;
 
 

@@ -251,6 +251,14 @@ return [
     "the food was deleted successfully from your cart"=>"تمت أزالة هذه الطعام من سلتك بنجاح",
     "the message status was updated successfully"=>"تم تغير حالة الرسائل بنجاح",
     "the code is correct"=>"الرمز صحيح",
+    "rank is required"=>"الترتيب مطلوب ",
+    "the email was updated successfully"=>"تم تعديل البريد الالكتروني بنجاح",
+    "role id is required"=>"معرف الصلاحية مطلوب",
+    "role id is not exists in our data"=>"معرف الصلاحية غير موجود ضمن بياناتنا",
+    "the admin was updated successfully"=>"تم تعديل الادمن بنجاح",
+    "this role for super admin"=>"هذه الصلاحية لأدمن بتحكم كامل",
+
+
 
 
 

@@ -25,6 +25,7 @@ type Resturant{
     tables: [table] @hasMany
     foodinresturant:[Foodinresturant!] @hasMany
     chats: [Chat] @hasMany
+    admins:Admin @hasMany
 }
 
 
