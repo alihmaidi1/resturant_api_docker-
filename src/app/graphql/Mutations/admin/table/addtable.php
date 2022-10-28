@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\models\table;
-final class Addtable
+namespace App\GraphQL\Mutations\Admin\table;
+
+use App\Models\table;
+
+final class addtable
 {
     /**
      * @param  null  $_
@@ -10,6 +12,7 @@ final class Addtable
      */
     public function __invoke($_, array $args)
     {
+
 
         $table=table::create([
 
@@ -22,5 +25,6 @@ final class Addtable
         ]);
         $table->message=trans("admin.the table was added successfully");
         return $table;
+
     }
 }

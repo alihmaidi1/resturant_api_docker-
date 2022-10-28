@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\table;
-final class Deletetable
+namespace App\GraphQL\Mutations\Admin\table;
+
+use App\Models\table;
+
+final class deletetable
 {
     /**
      * @param  null  $_
@@ -16,6 +18,7 @@ final class Deletetable
         $table->delete();
         $table1->message=trans("admin.the table was deelted successfully");
         return $table1;
+
 
     }
 }

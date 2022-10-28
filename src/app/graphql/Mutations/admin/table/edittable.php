@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\table;
-final class Edittable
+namespace App\GraphQL\Mutations\Admin\table;
+
+use App\Models\table;
+
+final class edittable
 {
     /**
      * @param  null  $_
@@ -21,5 +23,6 @@ final class Edittable
         $table->save();
         $table->message=trans("admin.the table was updated successfully");
         return $table;
+
     }
 }

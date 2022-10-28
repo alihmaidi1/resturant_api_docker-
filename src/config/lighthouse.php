@@ -179,6 +179,7 @@ return [
             "App\\GraphQL\\Queries\\Admin\\resturant",
             "App\\GraphQL\\Queries\\Admin\\tabletype",
             "App\\GraphQL\\Queries\\Admin\\currency",
+            "App\\GraphQL\\Queries\\Admin\\table",
 
 
 
@@ -194,6 +195,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\resturant",
             "App\\GraphQL\\Mutations\\Admin\\tabletype",
             "App\\GraphQL\\Mutations\\Admin\\currency",
+            "App\\GraphQL\\Mutations\\Admin\\table",
 
 
 

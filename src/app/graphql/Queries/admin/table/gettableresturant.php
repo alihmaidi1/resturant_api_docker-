@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\table;
-final class Gettableresturant
+namespace App\GraphQL\Queries\Admin\table;
+
+use App\Models\table;
+
+final class gettableresturant
 {
     /**
      * @param  null  $_
@@ -10,7 +12,10 @@ final class Gettableresturant
      */
     public function __invoke($_, array $args)
     {
+
         $tables=table::where("resturant_id",$args["resturant_id"])->get();
         return $tables;
+
+
     }
 }

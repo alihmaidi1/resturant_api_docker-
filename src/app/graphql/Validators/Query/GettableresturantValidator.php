@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Validators\Mutation;
+namespace App\GraphQL\Validators\Query;
 
 use Nuwave\Lighthouse\Validation\Validator;
 
@@ -17,9 +17,9 @@ final class GettableresturantValidator extends Validator
 
             "resturant_id"=>["required","exists:resturants,id"]
 
+
         ];
     }
-
 
     public function messages(): array
     {
@@ -30,4 +30,5 @@ final class GettableresturantValidator extends Validator
 
         ];
     }
+
 }
