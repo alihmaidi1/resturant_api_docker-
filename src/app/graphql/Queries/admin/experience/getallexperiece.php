@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\experience;
 
 use App\Models\employee_experience;
 
-final class Getallexperiece
+final class getallexperiece
 {
     /**
      * @param  null  $_

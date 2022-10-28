@@ -1,14 +1,14 @@
 
 extend type Mutation{
 
-    addexperiece(year:Int,benifit:Int,vacation:Int): Experience @validator @guard
-    editexperiece(id:ID,year:Int,benifit:Int,vacation:Int): Experience @validator @guard
-    deleteexperiece(id:ID):Experience @validator @guard
+    addexperiece(year:Int,benifit:Int,vacation:Int): Experience @validator @guard @can(ability:"experience",model:"App\\Models\\employee_experience")
+    editexperiece(id:ID,year:Int,benifit:Int,vacation:Int): Experience @validator @guard @can(ability:"experience",model:"App\\Models\\employee_experience")
+    deleteexperiece(id:ID):Experience @validator @guard @can(ability:"experience",model:"App\\Models\\employee_experience")
 }
 
 extend type Query{
 
-    getallexperiece: [Experience]  @guard
+    getallexperiece: [Experience]   @guard @can(ability:"experience",model:"App\\Models\\employee_experience")
 
 }
 type Experience{

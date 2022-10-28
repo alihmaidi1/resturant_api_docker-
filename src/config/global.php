@@ -20,6 +20,8 @@ return [
         "slider"=>["en"=>"Controll in Sliders","ar"=>"التحكم في العناصر المتحركة"],
         "banner"=>["en"=>"Controll in Banners","ar"=>"التحكم في البنرات"],
         "food"=>["en"=>"Controll in Food","ar"=>"التحكم في الطعام"],
+        "experience"=>["en"=>"Controll in Experience Employee","ar"=>"التحكم في خبرة الموظف"],
+
     ],
     "settings"=>[
 

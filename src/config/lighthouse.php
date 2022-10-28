@@ -173,7 +173,6 @@ return [
     'namespaces' => [
         'models' => ['App', 'App\\Models'],
         'queries' =>[
-            'App\\GraphQL\\Queries',
             "App\\GraphQL\\Queries\\Admin\\account",
             "App\\GraphQL\\Queries\\Admin\\role",
             "App\\GraphQL\\Queries\\Admin\\resturant",
@@ -184,7 +183,11 @@ return [
             "App\\GraphQL\\Queries\\Admin\\good",
             "App\\GraphQL\\Queries\\Admin\\goodinstorehouse",
             "App\\GraphQL\\Queries\\Admin\\job",
+            "App\\GraphQL\\Queries\\Admin\\experience",
 
+
+
+            'App\\GraphQL\\Queries',
 
 
 
@@ -205,6 +208,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\good",
             "App\\GraphQL\\Mutations\\Admin\\goodinstorehouse",
             "App\\GraphQL\\Mutations\\Admin\\job",
+            "App\\GraphQL\\Mutations\\Admin\\experience",
 
 
 

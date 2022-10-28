@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\experience;
 
 use App\Models\employee_experience;
 
-final class Addexperiece
+final class addexperiece
 {
     /**
      * @param  null  $_
@@ -12,6 +12,7 @@ final class Addexperiece
      */
     public function __invoke($_, array $args)
     {
+
 
         $experiece=employee_experience::create([
 
@@ -22,5 +23,7 @@ final class Addexperiece
         ]);
         $experiece->message=trans("admin.the experiece was added successfully");
         return $experiece;
+
+
     }
 }

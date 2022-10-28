@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\experience;
 
 use App\Models\employee_experience;
 
-final class Deleteexperiece
+final class deleteexperiece
 {
     /**
      * @param  null  $_
@@ -18,5 +18,7 @@ final class Deleteexperiece
         $experiece->delete();
         $experiece1->message=trans("admin.the experiece was deleted successfully");
         return $experiece1;
+
+
     }
 }

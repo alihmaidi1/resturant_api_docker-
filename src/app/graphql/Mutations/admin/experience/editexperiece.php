@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\experience;
 
 use App\Models\employee_experience;
 
-final class Editexperiece
+final class editexperiece
 {
     /**
      * @param  null  $_
@@ -13,6 +13,7 @@ final class Editexperiece
     public function __invoke($_, array $args)
     {
 
+
         $experiece=employee_experience::find($args["id"]);
         $experiece->year=$args["year"];
         $experiece->benifit=$args["benifit"];
@@ -20,5 +21,7 @@ final class Editexperiece
         $experiece->save();
         $experiece->message=trans("admin.the experiece was updated successfully");
         return $experiece;
+
+
     }
 }
