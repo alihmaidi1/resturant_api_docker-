@@ -1,8 +1,8 @@
 extend type Mutation{
 
-    addbanner(logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard
-    editbanner(id:ID,logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard
-    deletebanner(id:ID):Banner @validator @guard
+    addbanner(logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard @can(ability:"banner")
+    editbanner(id:ID,logo:Upload,status:Int,rank:Int,url:String,where_show:Int):Banner @validator @guard @can(ability:"banner")
+    deletebanner(id:ID):Banner @validator @guard @can(ability:"banner")
 
 
 }

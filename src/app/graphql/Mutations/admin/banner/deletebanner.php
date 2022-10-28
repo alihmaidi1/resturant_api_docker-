@@ -1,11 +1,11 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\banner;
 
 use App\Models\banner;
 use Illuminate\Support\Facades\Cache;
 
-final class Deletebanner
+final class deletebanner
 {
     /**
      * @param  null  $_
@@ -16,10 +16,12 @@ final class Deletebanner
 
         $banner=banner::find($args["id"]);
         Cache::pull("banners");
-        Cache::pull("banner_".$banner->id);
-        unlink("banner/".$banner->getRawOriginal("logo"));
+        Cache::pull("banner:".$banner->id);
+        unlink(public_path("banner/".$banner->getRawOriginal("logo")));
         $banner->message=trans("admin.the banner was deleted successfully");
 
         return $banner;
+
+
     }
 }

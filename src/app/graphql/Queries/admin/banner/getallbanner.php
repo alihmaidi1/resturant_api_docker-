@@ -1,11 +1,11 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\banner;
 
 use App\Models\banner;
 use Illuminate\Support\Facades\Cache;
 
-final class Getallbanner
+final class getallbanner
 {
     /**
      * @param  null  $_
@@ -20,6 +20,7 @@ final class Getallbanner
 
 
         });
+
 
     }
 }

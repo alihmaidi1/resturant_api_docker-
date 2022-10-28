@@ -1,11 +1,11 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\banner;
 
 use App\Models\banner;
 use Illuminate\Support\Facades\Cache;
 
-final class Getbannerwhereshow
+final class getbannerwhereshow
 {
     /**
      * @param  null  $_
@@ -28,5 +28,6 @@ final class Getbannerwhereshow
         }
 
         return $arr;
+
     }
 }

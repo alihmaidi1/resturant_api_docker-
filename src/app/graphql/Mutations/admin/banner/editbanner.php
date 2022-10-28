@@ -1,12 +1,12 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\banner;
 
 use App\Models\banner;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
-final class Editbanner
+final class editbanner
 {
     /**
      * @param  null  $_
@@ -14,6 +14,7 @@ final class Editbanner
      */
     public function __invoke($_, array $args)
     {
+
 
         $banner=banner::find($args["id"]);
         if($args["logo"]!=null){
@@ -30,7 +31,7 @@ final class Editbanner
         $banner->where_show=$args["where_show"];
         $banner->save();
         Cache::pull("banners");
-        Cache::put("banner_".$banner->id,$banner);
+        Cache::put("banner:".$banner->id,$banner);
         $banner->message=trans("admin.the banner was updated successfully");
         return $banner;
 
