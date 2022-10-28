@@ -6,6 +6,7 @@ return [
     "permssion"=>[
         "category"=>["en"=>"Controll in Categories","ar"=>"التحكم في الاصناف"],
         "admin"=>["en"=>"Controll in Admins","ar"=>"التحكم في الادمن"],
+        "goodInStorehouse"=>["en"=>"Controll in good at storehouse","ar"=>"التحكم في البضائع في مخزن"],
         "role"=>["en"=>"Controll in Roles","ar"=>"التحكم في الصلاحيات"],
         "resturant"=>["en"=>"Controll in Resturants","ar"=>"التحكم في المطاعم"],
         "tabletype"=>["en"=>"Controll in Table Types","ar"=>"التحكم في أنواع الطاولات"],

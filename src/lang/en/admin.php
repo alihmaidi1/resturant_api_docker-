@@ -256,7 +256,10 @@ return [
     "role id is required"=>"role id is required",
     "role id is not exists in our data"=>"role id is not exists in our data",
     "the admin was updated successfully"=>"the admin was updated successfully",
-    "this role for super admin"=>"this role for super admin"
+    "this role for super admin"=>"this role for super admin",
+    "storehouse id is required"=>"storehouse id is required",
+    "storehouse id is not exists in our data"=>"storehouse id is not exists in our data",
+
 
 
 

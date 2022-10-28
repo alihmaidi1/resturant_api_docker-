@@ -1,19 +1,24 @@
 
 extend type Mutation{
 
-    addgoodstorehouse(quantity:Int,min_quantity:Int,good_id:ID,storehouse_id:ID): goodstore @validator @guard
-    editgoodstore(id:ID,quantity:Int):goodstore @validator @guard
-    editminquantity(id:ID,min_quantity:Int):goodstore @validator @guard
-    deletegoodstorehouse(id:ID): goodstore @validator @guard
+    addgoodstorehouse(quantity:Int,min_quantity:Int,good_id:ID,storehouse_id:ID): storeGood @validator @guard @can(ability:"goodInStorehouse") @can(ability:"create",injectArgs:true)
+    editgoodstore(id:ID,quantity:Int):storeGood @validator @guard @can(ability:"goodInStorehouse") @can(ability:"updateQuantity",injectArgs:true)
+    editminquantity(id:ID,min_quantity:Int):storeGood @validator @guard @can(ability:"goodInStorehouse") @can(ability:"updateminQuantity",injectArgs:true)
+    deletegoodstorehouse(id:ID): storeGood @validator @guard @can(ability:"goodInStorehouse") @can(ability:"forceDelete",injectArgs:true)
 }
 
+extend type Query{
 
-type goodstore{
+    getallgoodinstorehouse(storehouse_id:ID):[storeGood] @validator @guard @can(ability:"goodInStorehouse") @can(ability:"view",injectArgs:true)
+
+}
+
+type storeGood{
 
     id:ID
     quantity: Int
     min_quantity: Int
     message:String
-
+    good:Good
 
 }

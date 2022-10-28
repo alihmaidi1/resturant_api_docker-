@@ -1,14 +1,14 @@
 extend type Mutation{
 
-    addtable(name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard @can(ability:"table")
-    edittable(id:ID,name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard @can(ability:"table")
-    deletetable(id:ID): table @validator @guard @can(ability:"table")
+    addtable(name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard @can(ability:"table") @can(ability:"create",injectArgs:true)
+    edittable(id:ID,name:String,person_number:Int,description_en:String,description_ar:String,status:Int,resturant_id:ID,type_id:ID): table @validator @guard @can(ability:"table") @can(ability:"update",injectArgs:true)
+    deletetable(id:ID): table @validator @guard @can(ability:"table") @can(ability:"forceDelete",injectArgs:true)
 
 }
 
 extend type Query{
 
-    gettableresturant(resturant_id:ID): [table] @validator
+    gettableresturant(resturant_id:ID): [table] @validator @can(ability:"view",injectArgs:true)
 
 
 
