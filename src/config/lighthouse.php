@@ -185,6 +185,8 @@ return [
             "App\\GraphQL\\Queries\\Admin\\job",
             "App\\GraphQL\\Queries\\Admin\\experience",
             "App\\GraphQL\\Queries\\Admin\\employee",
+            "App\\GraphQL\\Queries\\Admin\\setting",
+
 
 
 
@@ -213,6 +215,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\job",
             "App\\GraphQL\\Mutations\\Admin\\experience",
             "App\\GraphQL\\Mutations\\Admin\\employee",
+            "App\\GraphQL\\Mutations\\Admin\\setting",
 
 
 
