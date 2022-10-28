@@ -1,8 +1,9 @@
 extend type Mutation{
 
-    addtabletype(price: Float,name_en:String,name_ar:String,currency_id:Int): tabletype @validator @guard
-    edittabletype(id:ID,name_en:String,name_ar:String,price:Float,currency_id:Int): tabletype @validator @guard
-    deletetabletype(id:ID):tabletype @validator @guard
+    addtabletype(price: Float,name_en:String,name_ar:String,currency_id:Int): tabletype @validator @guard @can(ability:"tabletype")
+    edittabletype(id:ID,name_en:String,name_ar:String,price:Float,currency_id:Int): tabletype @validator @guard @can(ability:"tabletype")
+
+    deletetabletype(id:ID):tabletype @validator @guard @can(ability:"tabletype")
 
 }
 

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\tabletype;
-final class Addtabletype
+namespace App\GraphQL\Mutations\Admin\tabletype;
+
+use App\Models\tabletype;
+
+final class addtabletype
 {
     /**
      * @param  null  $_
@@ -11,6 +13,7 @@ final class Addtabletype
     public function __invoke($_, array $args)
     {
 
+
         $tableType=tabletype::create([
             "name"=>["en"=>$args["name_en"],"ar"=>$args["name_ar"]],
             "price"=>$args["price"],
@@ -18,5 +21,7 @@ final class Addtabletype
         ]);
         $tableType->message=trans("admin.the table type was added successfully");
         return $tableType;
+
+
     }
 }

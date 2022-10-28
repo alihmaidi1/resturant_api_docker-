@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\tabletype;
-final class Edittabletype
+namespace App\GraphQL\Mutations\Admin\tabletype;
+
+use App\Models\tabletype;
+
+final class edittabletype
 {
     /**
      * @param  null  $_
@@ -18,5 +20,8 @@ final class Edittabletype
         $tabletype->save();
         $tabletype->message=trans("admin.the table type was updated successfully");
         return $tabletype;
+
+
+
     }
 }

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\tabletype;
-final class Deletetabletype
+namespace App\GraphQL\Mutations\Admin\tabletype;
+
+use App\Models\tabletype;
+
+final class deletetabletype
 {
     /**
      * @param  null  $_
@@ -17,5 +19,7 @@ final class Deletetabletype
         $tabletype->delete();
         $tabletype1->message=trans("admin.the table type was deleted successfully");
         return $tabletype1;
+
+
     }
 }
