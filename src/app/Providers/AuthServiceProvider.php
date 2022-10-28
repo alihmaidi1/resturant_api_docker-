@@ -7,10 +7,12 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Laravel\Passport\Passport;
 use Carbon\Carbon;
 use \App\Models\admin;
+use App\Models\employee;
 use App\Models\storeGood;
 use App\Models\storehouse;
 use App\Models\table;
 use App\Policies\AdminPolicy;
+use App\Policies\employeePolicy;
 use App\Policies\goodstorePolicy;
 use App\Policies\storehousePolicy;
 use App\Policies\tablePolicy;
@@ -27,7 +29,8 @@ class AuthServiceProvider extends ServiceProvider
         admin::class=>AdminPolicy::class,
         storehouse::class=>storehousePolicy::class,
         table::class=>tablePolicy::class,
-        storeGood::class=>goodstorePolicy::class
+        storeGood::class=>goodstorePolicy::class,
+        employee::class=>employeePolicy::class
     ];
 
     /**

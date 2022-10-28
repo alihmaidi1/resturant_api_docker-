@@ -1,14 +1,14 @@
 extend type Mutation{
 
-    addemployee(name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard
-    editemployee(id:ID,name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard
-    getemployee(id:ID):Employee @validator @guard
-    deleteemployee(id:ID): Employee @validator @guard
+    addemployee(name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard @can(ability:"employee") @can(ability:"create", injectArgs:true)
+    editemployee(id:ID,name:String,email:String,phone:String,address:String,date_of_birth:String,is_empty:Int,vacation_token:Int,gender:Int,resturant_id:ID,manager_id:ID,job_id:ID,experience_id:ID): Employee @validator @guard @can(ability:"employee") @can(ability:"update", injectArgs:true)
+    deleteemployee(id:ID): Employee @validator @guard @can(ability:"employee") @can(ability:"forceDelete", injectArgs:true)
 }
 
 extend type Query{
 
-    getallemployee: [Employee!] @all
+    getemployee(id:ID):Employee @validator @guard @can(ability:"employee") @can(ability:"view", injectArgs:true)
+    getallemployee: [Employee] @can(ability:"employee")
 
 }
 type Employee{
