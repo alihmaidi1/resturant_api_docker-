@@ -1,15 +1,15 @@
 extend type Mutation{
 
-    addjob(name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard
-    editjob(id:ID,name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard
-    deletejob(id:ID): Job @validator @guard
+    addjob(name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard @can(ability:"job")
+    editjob(id:ID,name_en:String,name_ar:String,salary:Float,currency_id:ID): Job @validator @guard @can(ability:"job")
+    deletejob(id:ID): Job @validator @guard @can(ability:"job")
 
 
 }
 
 extend type Query{
 
-    getalljob: [Job!] @all @guard
+    getalljob: [Job!] @all @guard @can(ability:"job")
 
 }
 

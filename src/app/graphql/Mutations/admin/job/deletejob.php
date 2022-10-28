@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\job;
 
 use App\Models\job;
 
-final class Deletejob
+final class deletejob
 {
     /**
      * @param  null  $_
@@ -18,5 +18,7 @@ final class Deletejob
         $job->delete();
         $job1->message=trans("admin.the job was deleted successfully");
         return $job1;
+
+
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\job;
 
 use App\Models\job;
 
-final class Editjob
+final class editjob
 {
     /**
      * @param  null  $_
@@ -20,6 +20,7 @@ final class Editjob
         $job->save();
         $job->message=trans("admin.the job was updated successully");
         return $job;
+
 
     }
 }

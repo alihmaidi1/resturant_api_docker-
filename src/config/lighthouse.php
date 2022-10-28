@@ -183,6 +183,7 @@ return [
             "App\\GraphQL\\Queries\\Admin\\storehouse",
             "App\\GraphQL\\Queries\\Admin\\good",
             "App\\GraphQL\\Queries\\Admin\\goodinstorehouse",
+            "App\\GraphQL\\Queries\\Admin\\job",
 
 
 
@@ -203,6 +204,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\storehouse",
             "App\\GraphQL\\Mutations\\Admin\\good",
             "App\\GraphQL\\Mutations\\Admin\\goodinstorehouse",
+            "App\\GraphQL\\Mutations\\Admin\\job",
 
 
 
