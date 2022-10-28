@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use  \App\Models\currency;
-final class Editcurrency
+namespace App\GraphQL\Mutations\Admin\currency;
+
+use App\Models\currency;
+
+final class editcurrency
 {
     /**
      * @param  null  $_
@@ -10,7 +12,6 @@ final class Editcurrency
      */
     public function __invoke($_, array $args)
     {
-
 
         $currency=currency::find($args["id"]);
         $currency->name=["en"=>$args["name_en"],"ar"=>$args["name_ar"]];
@@ -31,6 +32,8 @@ final class Editcurrency
 
         $currency->message=trans("admin.the currency was updated successfully");
         return $currency;
+
+
 
     }
 }

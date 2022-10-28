@@ -178,6 +178,8 @@ return [
             "App\\GraphQL\\Queries\\Admin\\role",
             "App\\GraphQL\\Queries\\Admin\\resturant",
             "App\\GraphQL\\Queries\\Admin\\tabletype",
+            "App\\GraphQL\\Queries\\Admin\\currency",
+
 
 
 
@@ -191,6 +193,8 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\role",
             "App\\GraphQL\\Mutations\\Admin\\resturant",
             "App\\GraphQL\\Mutations\\Admin\\tabletype",
+            "App\\GraphQL\\Mutations\\Admin\\currency",
+
 
 
             "App\\GraphQL\\Mutations",

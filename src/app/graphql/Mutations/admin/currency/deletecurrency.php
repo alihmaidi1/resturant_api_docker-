@@ -1,10 +1,11 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use App\Exceptions\CustomException;
+namespace App\GraphQL\Mutations\Admin\currency;
 
-use \App\Models\currency;
-final class Deletecurrency
+use App\Exceptions\CustomException;
+use App\Models\currency;
+
+final class deletecurrency
 {
     /**
      * @param  null  $_

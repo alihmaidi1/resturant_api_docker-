@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\currency;
-final class Addcurreny
+namespace App\GraphQL\Mutations\Admin\currency;
+
+use App\Models\currency;
+
+final class addcurreny
 {
     /**
      * @param  null  $_
@@ -20,6 +22,7 @@ final class Addcurreny
         $currency->message=trans("admin.the currency was created successfully");
         $currency->is_default_for_website=($currency->is_default_for_website)?trans("admin.yes"):trans("admin.no");
         return $currency;
+
 
     }
 }

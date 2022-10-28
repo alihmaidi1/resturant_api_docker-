@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\currency;
-final class Changedefaultcurrency
+namespace App\GraphQL\Mutations\Admin\currency;
+
+use App\Models\currency;
+
+final class changedefaultcurrency
 {
     /**
      * @param  null  $_
@@ -20,5 +22,7 @@ final class Changedefaultcurrency
         $currency->message=trans("admin.the currency status was updated successfully");
         $currency->is_default_for_website=($currency->is_default_for_website)?trans("admin.yes"):trans("admin.no");
         return $currency;
+
+
     }
 }
