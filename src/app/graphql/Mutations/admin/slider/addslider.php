@@ -1,12 +1,12 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\slider;
 
 use App\Models\slider;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
-final class Addslider
+final class addslider
 {
     /**
      * @param  null  $_
@@ -23,10 +23,12 @@ final class Addslider
             "status"=>$args["status"],
             "rank"=>$args["rank"]
         ]);
+
         $slider->message=trans("admin.the slider was added successfully");
-        Cache::put("slider_".$slider->id,$slider);
+        Cache::put("slider:".$slider->id,$slider);
         Cache::pull("sliders");
-        return Cache::get("slider_".$slider->id);
+        return Cache::get("slider:".$slider->id);
+
 
     }
 }

@@ -1,8 +1,8 @@
 extend type Mutation{
 
-    addslider(logo:Upload,status:Int,rank:Int): Slider @validator @guard
-    editslider(id:ID,logo:Upload,status:Int,rank:Int): Slider @validator @guard
-    deleteslider(id:ID): Slider @validator @guard
+    addslider(logo:Upload,status:Int,rank:Int): Slider @validator @guard @can(ability:"slider")
+    editslider(id:ID,logo:Upload,status:Int,rank:Int): Slider @validator @guard @can(ability:"slider")
+    deleteslider(id:ID): Slider @validator @guard @can(ability:"slider")
 
 }
 extend type Query{

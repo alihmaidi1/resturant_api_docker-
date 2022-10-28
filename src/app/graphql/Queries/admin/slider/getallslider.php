@@ -1,11 +1,11 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\slider;
 
 use App\Models\slider;
 use Illuminate\Support\Facades\Cache;
 
-final class Getallslider
+final class getallslider
 {
     /**
      * @param  null  $_
@@ -19,6 +19,5 @@ final class Getallslider
             return slider::all();
 
         });
-
     }
 }
