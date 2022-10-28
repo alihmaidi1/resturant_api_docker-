@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\good;
-final class Addgood
+namespace App\GraphQL\Mutations\Admin\good;
+
+use App\Models\good;
+
+final class addgood
 {
     /**
      * @param  null  $_

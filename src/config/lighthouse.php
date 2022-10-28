@@ -181,6 +181,8 @@ return [
             "App\\GraphQL\\Queries\\Admin\\currency",
             "App\\GraphQL\\Queries\\Admin\\table",
             "App\\GraphQL\\Queries\\Admin\\storehouse",
+            "App\\GraphQL\\Queries\\Admin\\good",
+
 
 
 
@@ -198,6 +200,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\currency",
             "App\\GraphQL\\Mutations\\Admin\\table",
             "App\\GraphQL\\Mutations\\Admin\\storehouse",
+            "App\\GraphQL\\Mutations\\Admin\\good",
 
 
 

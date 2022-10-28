@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\good;
 
 use App\Models\good;
 
-final class Deletegood
+final class deletegood
 {
     /**
      * @param  null  $_
@@ -18,5 +18,7 @@ final class Deletegood
         $good->delete();
         $good1->message=trans("admin.the good was deleted successfully");
         return $good1;
+
+
     }
 }

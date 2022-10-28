@@ -1,13 +1,13 @@
 extend type Mutation{
 
-    addgood(name_en:String,name_ar:String): Good @validator @guard
-    editgood(id:ID,name_en:String,name_ar:String): Good @validator @guard
-    deletegood(id:ID): Good @validator @guard
+    addgood(name_en:String,name_ar:String): Good @validator @guard @can(ability:"good")
+    editgood(id:ID,name_en:String,name_ar:String): Good @validator @guard @can(ability:"good")
+    deletegood(id:ID): Good @validator @guard @can(ability:"good")
 }
 
 extend type Query{
 
-    getallgood: [Good!] @all @guard
+    getallgood: [Good!] @all @guard @can(ability:"good")
 }
 
 type Good{

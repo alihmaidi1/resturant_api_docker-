@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\good;
-final class Editgood
+namespace App\GraphQL\Mutations\Admin\good;
+
+use App\Models\good;
+
+final class editgood
 {
     /**
      * @param  null  $_
@@ -16,5 +18,7 @@ final class Editgood
         $good->save();
         $good->message=trans("admin.the good was updated successfully");
         return $good;
+
+
     }
 }
