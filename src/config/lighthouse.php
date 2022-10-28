@@ -180,6 +180,7 @@ return [
             "App\\GraphQL\\Queries\\Admin\\tabletype",
             "App\\GraphQL\\Queries\\Admin\\currency",
             "App\\GraphQL\\Queries\\Admin\\table",
+            "App\\GraphQL\\Queries\\Admin\\storehouse",
 
 
 
@@ -196,6 +197,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\tabletype",
             "App\\GraphQL\\Mutations\\Admin\\currency",
             "App\\GraphQL\\Mutations\\Admin\\table",
+            "App\\GraphQL\\Mutations\\Admin\\storehouse",
 
 
 

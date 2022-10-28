@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\storehouse;
-final class Editstorehouse
+namespace App\GraphQL\Mutations\Admin\storehouse;
+
+use App\Models\storehouse;
+
+final class editstorehouse
 {
     /**
      * @param  null  $_
@@ -10,6 +12,7 @@ final class Editstorehouse
      */
     public function __invoke($_, array $args)
     {
+
 
         $storehouse=storehouse::find($args["id"]);
         $storehouse->name=$args["name"];
@@ -19,5 +22,6 @@ final class Editstorehouse
         $storehouse->save();
         $storehouse->message=trans("admin.the storehouse was updated successfully");
         return $storehouse;
+
     }
 }

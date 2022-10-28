@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Queries\Admin\storehouse;
 
 use App\Models\storehouse;
 
-final class Getallresturantstorehouse
+final class getallresturantstorehouse
 {
     /**
      * @param  null  $_
@@ -13,8 +13,10 @@ final class Getallresturantstorehouse
     public function __invoke($_, array $args)
     {
 
+
         $storehouses=storehouse::where("resturant_id",$args["resturant_id"])->get();
         return $storehouses;
+
 
     }
 }

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
-use \App\Models\storehouse;
-final class Addstorehouse
+namespace App\GraphQL\Mutations\Admin\storehouse;
+
+use App\Models\storehouse;
+
+final class addstorehouse
 {
     /**
      * @param  null  $_
@@ -10,6 +12,7 @@ final class Addstorehouse
      */
     public function __invoke($_, array $args)
     {
+
 
         $storehouse=storehouse::create([
 
@@ -21,5 +24,6 @@ final class Addstorehouse
 
         $storehouse->message=trans("admin.the storehouse was added successfully");
         return $storehouse;
+
     }
 }
