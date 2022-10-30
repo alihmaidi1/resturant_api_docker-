@@ -11,10 +11,10 @@ final class logout
     public function __invoke($_, array $args)
     {
 
-        $user=auth("api")->user();
-        $user->message=trans("admin.you are logout successfully");
-        $user->token()->revoke();
-        return $user;
+            $user=auth("api")->user();
+            $user->message=trans("admin.you are logout successfully");
+            $user->token()->revoke();
+            return $user;
 
 
     }

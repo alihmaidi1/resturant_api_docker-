@@ -13,16 +13,17 @@ final class getalladmin
     public function __invoke($_, array $args)
     {
 
-        $adminRank=auth("api")->user()->rank;
-        $adminResturant=auth("api")->user()->resturant;
+            $adminRank=auth("api")->user()->rank;
+            $adminRole_id=auth("api")->user()->role_id;
 
-        if($adminResturant==null){
+            if($adminRole_id == 1){
 
-            return admin::where("id","!=",auth()->user()->id)->get();
-        }else{
+                return admin::where("id","!=",auth()->user()->id)->get();
+            }else{
 
-            return admin::where("resturant_id",$adminResturant)->where("rank","<",$adminRank)->get();
-        }
+                $adminResturant=auth("api")->user()->resturant_id;
+                return admin::where("resturant_id",$adminResturant)->where("rank","<",$adminRank)->get();
+            }
 
 
 

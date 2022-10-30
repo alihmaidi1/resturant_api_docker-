@@ -20,6 +20,7 @@ final class editresturant
         $resturant->save();
         $resturant->message=trans("admin.the resturant was updated successfully");
         Cache::put("resturant:".$resturant->id,$resturant);
+        Cache::pull("resturants");
         return $resturant;
 
 

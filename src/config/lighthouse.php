@@ -189,6 +189,8 @@ return [
             "App\\GraphQL\\Queries\\Admin\\category",
             "App\\GraphQL\\Queries\\Admin\\slider",
             "App\\GraphQL\\Queries\\Admin\\banner",
+            "App\\GraphQL\\Queries\\Admin\\food",
+
 
 
 
@@ -225,6 +227,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\category",
             "App\\GraphQL\\Mutations\\Admin\\slider",
             "App\\GraphQL\\Mutations\\Admin\\banner",
+            "App\\GraphQL\\Mutations\\Admin\\food",
 
 
 

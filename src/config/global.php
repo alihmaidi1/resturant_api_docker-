@@ -1,93 +1,100 @@
 <?php return array (
-  'permssion' => 
+
+    "lang"=>[
+        "ar",
+        "en"
+
+    ]
+    ,
+  'permssion' =>
   array (
-    'category' => 
+    'category' =>
     array (
       'en' => 'Controll in Categories',
       'ar' => 'التحكم في الاصناف',
     ),
-    'admin' => 
+    'admin' =>
     array (
       'en' => 'Controll in Admins',
       'ar' => 'التحكم في الادمن',
     ),
-    'goodInStorehouse' => 
+    'goodInStorehouse' =>
     array (
       'en' => 'Controll in good at storehouse',
       'ar' => 'التحكم في البضائع في مخزن',
     ),
-    'role' => 
+    'role' =>
     array (
       'en' => 'Controll in Roles',
       'ar' => 'التحكم في الصلاحيات',
     ),
-    'resturant' => 
+    'resturant' =>
     array (
       'en' => 'Controll in Resturants',
       'ar' => 'التحكم في المطاعم',
     ),
-    'tabletype' => 
+    'tabletype' =>
     array (
       'en' => 'Controll in Table Types',
       'ar' => 'التحكم في أنواع الطاولات',
     ),
-    'currency' => 
+    'currency' =>
     array (
       'en' => 'Controll in Currencies',
       'ar' => 'التحكم في العملات',
     ),
-    'table' => 
+    'table' =>
     array (
       'en' => 'Controll in Tables',
       'ar' => 'التحكم في الطاولات',
     ),
-    'storehouse' => 
+    'storehouse' =>
     array (
       'en' => 'Controll in Storehouses',
       'ar' => 'التحكم في المخازن',
     ),
-    'good' => 
+    'good' =>
     array (
       'en' => 'Controll in Goods',
       'ar' => 'التحكم في البضائع',
     ),
-    'job' => 
+    'job' =>
     array (
       'en' => 'Controll in Jobs',
       'ar' => 'التحكم في الوظائف',
     ),
-    'employee' => 
+    'employee' =>
     array (
       'en' => 'Controll in Employees',
       'ar' => 'التحكم في  الموظفين',
     ),
-    'setting' => 
+    'setting' =>
     array (
       'en' => 'Controll in Setting',
       'ar' => 'التحكم في الاعدادت',
     ),
-    'slider' => 
+    'slider' =>
     array (
       'en' => 'Controll in Sliders',
       'ar' => 'التحكم في العناصر المتحركة',
     ),
-    'banner' => 
+    'banner' =>
     array (
       'en' => 'Controll in Banners',
       'ar' => 'التحكم في البنرات',
     ),
-    'food' => 
+    'food' =>
     array (
       'en' => 'Controll in Food',
       'ar' => 'التحكم في الطعام',
     ),
-    'experience' => 
+    'experience' =>
     array (
       'en' => 'Controll in Experience Employee',
       'ar' => 'التحكم في خبرة الموظف',
     ),
   ),
-  'settings' => 
+  'settings' =>
   array (
     'meta_logo' => 'meta_logo.png',
     'logo' => 'logo.png',
@@ -95,12 +102,12 @@
     'status' => 1,
     'address' => 'Syria,Aleppo',
     'phone' => '0953453454',
-    'meta_title' => 
+    'meta_title' =>
     array (
       'en' => 'Syria Resturant',
       'ar' => 'مطعم عربي',
     ),
-    'meta_description' => 
+    'meta_description' =>
     array (
       'en' => 'it\'s good resturant',
       'ar' => 'أنه مطعم جيد',
@@ -111,15 +118,15 @@
     'currency_id' => '1',
     'open_at' => '9:00 AM',
     'close_at' => '10:00 PM',
-    'day_open' => 
+    'day_open' =>
     array (
-      'en' => 
+      'en' =>
       array (
         0 => 'sunday',
         1 => 'monday',
         2 => 'wendenday',
       ),
-      'ar' => 
+      'ar' =>
       array (
         0 => 'الاحد',
         1 => 'الاثنين',

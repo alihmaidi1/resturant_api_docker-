@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
     function getTotalPrice($time1,$time2,$price){
 
@@ -51,7 +53,7 @@ use Illuminate\Support\Facades\Http;
 
     function tokenInfo($email,$password){
 
-        $client=DB::table('oauth_clients')->first();
+        $client= DB::table('oauth_clients')->first();
 
         return Http::asForm()->post(env("APP_URL")."/oauth/token",[
                 'grant_type' => 'password',
@@ -65,4 +67,26 @@ use Illuminate\Support\Facades\Http;
 
     }
 
+
+
+    // function issueToken($email,$password){
+
+    //     $client= DB::table('oauth_clients')->first();
+
+    //     $param=[
+    //                     'grant_type' => 'password',
+    //                     'client_id' =>$client->id,
+    //                     'client_secret' => $client->secret ,
+    //                     'username' => $email,
+    //                     'password' => $password,
+
+    //     ];
+    //     $request=new Request();
+    //    $proxy= $request->create("oauth/token","post",$param);
+    //     // $request=Request::create("oauth/token","post",$param);
+    // 	// $proxy = Request::create('oauth/token', 'POST');
+
+    // 	return Route::dispatch($proxy);
+
+	// }
 
