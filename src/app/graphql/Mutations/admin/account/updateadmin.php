@@ -24,11 +24,8 @@ final class updateadmin
             $admin->password=Hash::make($args["password"]);
 
         }
-
         $admin->save();
         $admin->message=trans("admin.the admin was updated successfully");
-        $admin->resturant;
-        $admin->role;
         return $admin;
     }
 }

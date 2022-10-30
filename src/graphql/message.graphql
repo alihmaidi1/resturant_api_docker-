@@ -1,12 +1,12 @@
 extend type Query{
 
-    getresturantmessage(resturant_id:ID):[Message] @guard(with:["user_api"]) @validator
+    getresturantmessage(resturant_id:ID):[Message] @guard(with:["web"]) @validator
 
 }
 
 extend type Mutation{
 
-    changeusermessagestatus(resturant_id:ID): messagestatus @guard(with:["user_api"]) @validator
+    changeusermessagestatus(resturant_id:ID): messagestatus @guard(with:["web"]) @validator
 
 }
 

@@ -1,15 +1,15 @@
 
 extend type Mutation{
 
-    addtocart(resturant_food_id:ID,quantity:Int):Cart @validator @guard(with:["user_api"])
-    editcartquantity(id:ID,quantity:Int):Cart @validator @guard(with:["user_api"])
-    deletecart(id:ID):Cart @validator @guard(with:["user_api"])
+    addtocart(resturant_food_id:ID,quantity:Int):Cart @validator @guard(with:["web"])
+    editcartquantity(id:ID,quantity:Int):Cart @validator @guard(with:["web"])
+    deletecart(id:ID):Cart @validator @guard(with:["web"])
 
 }
 
 extend type Query{
 
-    getallcart:[Cart] @guard(with:["user_api"])
+    getallcart:[Cart] @guard(with:["web"])
 
 
 }

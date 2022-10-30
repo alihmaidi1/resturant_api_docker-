@@ -2,6 +2,7 @@
 
 namespace App\GraphQL\Mutations\User\account;
 
+use App\Exceptions\CustomException;
 use App\Mail\resetemail;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -31,8 +32,16 @@ final class createuser
         Mail::to($args['email'])->send(new resetemail($verified_code));
 
         $user->message=trans("admin.the account was created successfully");
-        $user->token_info=tokenInfo($args["email"],$args["password"],"users");
-        return $user;
+        $token=tokenInfo($args["email"],$args["password"],"users");
+        if($token->status()==200){
+
+            $user->token_info=$token->json();
+            return $user;
+
+        }else{
+
+            throw new CustomException(trans("admin.we have error"));
+        }
 
 
     }

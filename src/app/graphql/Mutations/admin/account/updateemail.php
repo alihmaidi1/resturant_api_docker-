@@ -15,8 +15,6 @@ final class updateemail
         $admin->email=$args["email"];
         $admin->save();
         $admin->message=trans("admin.the email was updated successfully");
-        $admin->resturant;
-        $admin->role;
         return $admin;
 
     }

@@ -1,16 +1,16 @@
 
 extend type Mutation {
 
-    addsuggest(description:String): Suggest @validator @guard(with:["user_api"])
-    editsuggest(id:ID,description:String):Suggest @validator @guard(with:["user_api"])
-    deletesuggest(id:ID):Suggest @validator @guard(with:["user_api"])
+    addsuggest(description:String): Suggest @validator @guard(with:["web"])
+    editsuggest(id:ID,description:String):Suggest @validator @guard(with:["web"])
+    deletesuggest(id:ID):Suggest @validator @guard(with:["web"])
 }
 
 
 extend type Query{
 
 
-    getallsuggest: [Suggest!] @guard(with:["user_api"])
+    getallsuggest: [Suggest!] @guard(with:["web"])
 
 }
 

@@ -13,7 +13,7 @@ final class edituserprofile
     public function __invoke($_, array $args)
     {
 
-        $user=auth("user_api")->user();
+        $user=auth("web")->user();
         $user->name=$args["name"];
         $user->copon_notification=$args["copon_notification"];
         $user->save();

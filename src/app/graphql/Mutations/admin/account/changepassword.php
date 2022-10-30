@@ -25,9 +25,16 @@ final class changepassword
         $admin->employee;
         $admin->message=trans("admin.the password was updated successfully");
         $token=tokenInfo($admin->email,$args['password'],"admins");
-        $admin->token_info=$token->json();
-        auth('reset_password')->logout();
-        return $admin;
+        if($token->status()==200){
+
+            $admin->token_info=$token->json();
+            auth('reset_password')->logout();
+            return $admin;
+
+        }else{
+
+            throw new CustomException(trans("admin.we have error"));
+        }
 
 
     }
