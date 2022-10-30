@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string("code");
+            $table->string("code")->nullable();
+            $table->string("reset_code")->nullable();
             $table->integer("balance")->default(0);
             $table->boolean("copon_notification")->default(0)->nullable();
             $table->string('email')->unique();

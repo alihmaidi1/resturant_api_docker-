@@ -41,14 +41,20 @@ return [
             'driver' => 'passport',
             'provider' => 'admins',
         ],
+        'api_web' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
+
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
 
 
         'user_api' => [
             'driver' => 'passport',
-            'provider' => 'users',
-        ],
-        'web' => [
-            'driver' => 'session',
             'provider' => 'users',
         ],
 
@@ -69,10 +75,6 @@ return [
 
 
 
-        'api_web' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
 
     ],
 

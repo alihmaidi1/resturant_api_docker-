@@ -15,7 +15,6 @@ final class VerifiedaccountValidator extends Validator
     {
         return [
 
-            "id"=>["required","exists:users,id"],
             "code"=>["required"]
 
         ];
@@ -26,8 +25,6 @@ final class VerifiedaccountValidator extends Validator
     {
         return [
 
-            "id.required"=>trans("admin.id is required"),
-            "id.exists"=>trans("admin.id is not exists in our data"),
             "code.required"=>trans("admin.code is required")
 
 

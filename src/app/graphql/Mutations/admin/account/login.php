@@ -16,7 +16,7 @@ final class login
 
         if(Auth::guard('api_web')->attempt(['email'=>$args['email'],"password"=>$args['password']])){
             $user=auth("api_web")->user();
-            $token=tokenInfo($args['email'],$args['password']);
+            $token=tokenInfo($args['email'],$args['password'],"admins");
             $user->token_info=$token->json();
             $user->message=trans("admin.your are login successfully");
             return $user;

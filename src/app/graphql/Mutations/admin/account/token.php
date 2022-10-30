@@ -15,15 +15,7 @@ final class token
     public function __invoke($_, array $args)
     {
 
-        $client=DB::table('oauth_clients')->first();
-        $val= Http::asForm()->post(env("APP_URL")."/oauth/token",[
-            'grant_type' => 'refresh_token',
-            'refresh_token' => $args['your_refresh_token'],
-            'client_id' => $client->id,
-            'client_secret' => $client->secret,
-
-        ]);
-
+        $val=refreshToken($args["your_refresh_token"],"admins");
         if($val->status()==200){
 
             return $val->json();

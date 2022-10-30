@@ -11,28 +11,6 @@ class foodresturantPolicy
 {
     use HandlesAuthorization;
 
-    /**
-     * Determine whether the user can view any models.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function viewAny(User $user)
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\resturant_food  $resturantFood
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function view(User $user, resturant_food $resturantFood)
-    {
-        //
-    }
 
     /**
      * Determine whether the user can create models.
@@ -83,29 +61,6 @@ class foodresturantPolicy
 
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\resturant_food  $resturantFood
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function delete(User $user, resturant_food $resturantFood)
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can restore the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\resturant_food  $resturantFood
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function restore(User $user, resturant_food $resturantFood)
-    {
-        //
-    }
 
     /**
      * Determine whether the user can permanently delete the model.

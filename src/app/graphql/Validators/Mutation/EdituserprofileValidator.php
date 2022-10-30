@@ -15,7 +15,6 @@ final class EdituserprofileValidator extends Validator
     {
         return [
 
-            "id"=>["required","exists:users,id"],
             "name"=>["required"],
             "copon_notification"=>["required"]
 

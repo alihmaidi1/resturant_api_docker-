@@ -2,14 +2,14 @@
 extend type Mutation {
 
     createuser(name:String,email:String,password:String):User @validator
-    verifiedaccount(id:ID,code:String): Message @validator @guard(with:["user_api"])
+    verifiedaccount(code:String): Message12 @validator @guard(with:["user_api"])
     refreshtokenuser(your_refresh_token:String): Token
-    edituserprofile(id:ID,name:String,copon_notification:Int): User @validator @guard(with:["user_api"])
+    edituserprofile(name:String,copon_notification:Int): User @validator @guard(with:["user_api"]) @can(ability:"userverified")
     loginuser(email:String,password:String):User @validator
     logoutuser:User @guard(with:["user_api"])
-    sendmailuser(email:String):Message @validator
+    sendmailuser(email:String):Message12 @validator
     changeuserpassword(password:String): User @validator @guard(with:"reset_user_password")
-
+    checkresetcodeuser(code:String):Message12 @validator @guard(with:"reset_user_password")
 
 }
 
@@ -30,7 +30,8 @@ type User{
     chats: [Chat] @hasMany
 
 }
-type Message{
+type Message12{
 
     message:String
+    token:String
 }

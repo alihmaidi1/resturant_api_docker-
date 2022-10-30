@@ -12,6 +12,7 @@ use App\Models\resturant_food;
 use App\Models\storeGood;
 use App\Models\storehouse;
 use App\Models\table;
+use App\Models\User;
 use App\Policies\AdminPolicy;
 use App\Policies\employeePolicy;
 use App\Policies\foodresturantPolicy;
@@ -45,8 +46,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        foreach(Config::get("global.permssion") as $name=>$value){
 
+        foreach(Config::get("global.permssion") as $name=>$value){
 
         Gate::define($name,function(admin $admin) use($name){
 
@@ -64,9 +65,14 @@ class AuthServiceProvider extends ServiceProvider
 
         });
 
-
-
         }
+
+        Gate::define("userverified",function(){
+
+            return true;
+        });
+
+
             Passport::tokensExpireIn(Carbon::now()->addMinutes(60));
             Passport::refreshTokensExpireIn(Carbon::now()->addDays(5));
 

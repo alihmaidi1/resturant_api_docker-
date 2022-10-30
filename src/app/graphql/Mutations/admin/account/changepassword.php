@@ -24,7 +24,7 @@ final class changepassword
         $admin->role;
         $admin->employee;
         $admin->message=trans("admin.the password was updated successfully");
-        $token=tokenInfo($admin->email,$args['password']);
+        $token=tokenInfo($admin->email,$args['password'],"admins");
         $admin->token_info=$token->json();
         auth('reset_password')->logout();
         return $admin;

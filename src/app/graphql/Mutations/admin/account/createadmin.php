@@ -20,8 +20,6 @@ final class createadmin
             "resturant_id"=>$args["resturant_id"],
             "rank"=>$args["rank"]
         ]);
-        $admin->rule;
-        $admin->resturant;
         $admin->message=trans("admin.the admin was created successfully");
         return $admin;
 
