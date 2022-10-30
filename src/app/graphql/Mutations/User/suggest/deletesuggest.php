@@ -1,11 +1,11 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\User\suggest;
 
 use App\Exceptions\CustomException;
 use App\Models\suggest;
 
-final class Deletesuggest
+final class deletesuggest
 {
     /**
      * @param  null  $_
@@ -15,7 +15,7 @@ final class Deletesuggest
     {
 
         $suggest=suggest::find($args["id"]);
-        $user=auth("user_api")->user();
+        $user=auth("web")->user();
         if($user->id!=$suggest->user_id){
 
             throw new CustomException(trans("admin.you don't have perrmion to delete this suggest"));
@@ -28,6 +28,7 @@ final class Deletesuggest
             return $suggest1;
 
         }
+
 
     }
 }

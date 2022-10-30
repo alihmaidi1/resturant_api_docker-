@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\User\suggest;
 
 use App\Models\suggest;
 
-final class Addsuggest
+final class addsuggest
 {
     /**
      * @param  null  $_
@@ -13,7 +13,7 @@ final class Addsuggest
     public function __invoke($_, array $args)
     {
 
-        $user=auth("user_api")->user();
+        $user=auth("web")->user();
         $suggest=suggest::create([
             "description"=>$args["description"],
             "user_id"=>$user->id

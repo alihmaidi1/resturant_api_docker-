@@ -192,6 +192,8 @@ return [
             "App\\GraphQL\\Queries\\Admin\\food",
             "App\\GraphQL\\Queries\\Admin\\foodinresturant",
             "App\\GraphQL\\Queries\\user\\account",
+            "App\\GraphQL\\Queries\\user\\suggest",
+
 
 
 
@@ -233,6 +235,7 @@ return [
             "App\\GraphQL\\Mutations\\Admin\\food",
             "App\\GraphQL\\Mutations\\Admin\\foodinresturant",
             "App\\GraphQL\\Mutations\\user\\account",
+            "App\\GraphQL\\Mutations\\user\\suggest",
 
 
 

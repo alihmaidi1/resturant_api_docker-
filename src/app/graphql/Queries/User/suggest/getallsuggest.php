@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\User\suggest;
 
 use App\Models\suggest;
 
-final class Getallsuggest
+final class getallsuggest
 {
     /**
      * @param  null  $_
@@ -13,7 +13,7 @@ final class Getallsuggest
     public function __invoke($_, array $args)
     {
 
-        $user=auth("user_api")->user();
+        $user=auth("web")->user();
         $suggests=suggest::where("user_id",$user->id)->get();
         return $suggests;
 

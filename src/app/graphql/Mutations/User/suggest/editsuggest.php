@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\User\suggest;
 
 use App\Models\suggest;
 
-final class Editsuggest
+final class editsuggest
 {
     /**
      * @param  null  $_
