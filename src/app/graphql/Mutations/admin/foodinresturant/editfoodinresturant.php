@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\foodinresturant;
 
 use App\Models\resturant_food;
 
-final class Editfoodinresturant
+final class editfoodinresturant
 {
     /**
      * @param  null  $_
@@ -22,6 +22,7 @@ final class Editfoodinresturant
         $foodinresturant->save();
         $foodinresturant->message=trans("admin.the food in resturant was updated data successfully");
         return $foodinresturant;
+
 
     }
 }

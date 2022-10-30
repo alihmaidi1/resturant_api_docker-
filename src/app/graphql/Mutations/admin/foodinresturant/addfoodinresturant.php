@@ -1,11 +1,10 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\foodinresturant;
 
 use App\Models\resturant_food;
-use Illuminate\Support\Facades\Cache;
 
-final class Addfoodinresturant
+final class addfoodinresturant
 {
     /**
      * @param  null  $_
@@ -24,6 +23,7 @@ final class Addfoodinresturant
 
         $foodinresturant->message=trans("admin.the food was added to resturant successfully");
         return $foodinresturant;
+
 
     }
 }

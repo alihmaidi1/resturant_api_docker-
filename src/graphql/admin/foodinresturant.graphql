@@ -1,8 +1,8 @@
 extend type Mutation{
 
-    addfoodinresturant(resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard
-    editfoodinresturant(id:ID,resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard
-    deletefoodresturant(id:ID):Foodinresturant @validator @guard
+    addfoodinresturant(resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard @can(ability:"food",model:"App\\Models\\resturant_food") @can(ability:"create",injectArgs:true,model:"App\\Models\\resturant_food")
+    editfoodinresturant(id:ID,resturant_id:ID,food_id:ID,isVisiable:Int,price:Float,currency_id:ID): Foodinresturant @validator @guard @can(ability:"food",model:"App\\Models\\resturant_food") @can(ability:"update",injectArgs:true,model:"App\\Models\\resturant_food")
+    deletefoodresturant(id:ID):Foodinresturant @validator @guard @can(ability:"food",model:"App\\Models\\resturant_food") @can(ability:"forceDelete",injectArgs:true,model:"App\\Models\\resturant_food")
 
 }
 

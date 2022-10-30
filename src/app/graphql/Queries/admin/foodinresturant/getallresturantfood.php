@@ -1,10 +1,10 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\foodinresturant;
 
 use App\Models\resturant_food;
 
-final class Getallresturantfood
+final class getallresturantfood
 {
     /**
      * @param  null  $_
@@ -14,6 +14,7 @@ final class Getallresturantfood
     {
 
         return resturant_food::all();
+
 
     }
 }

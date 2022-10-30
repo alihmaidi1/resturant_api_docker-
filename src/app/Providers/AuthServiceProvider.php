@@ -8,11 +8,13 @@ use Laravel\Passport\Passport;
 use Carbon\Carbon;
 use \App\Models\admin;
 use App\Models\employee;
+use App\Models\resturant_food;
 use App\Models\storeGood;
 use App\Models\storehouse;
 use App\Models\table;
 use App\Policies\AdminPolicy;
 use App\Policies\employeePolicy;
+use App\Policies\foodresturantPolicy;
 use App\Policies\goodstorePolicy;
 use App\Policies\storehousePolicy;
 use App\Policies\tablePolicy;
@@ -30,7 +32,8 @@ class AuthServiceProvider extends ServiceProvider
         storehouse::class=>storehousePolicy::class,
         table::class=>tablePolicy::class,
         storeGood::class=>goodstorePolicy::class,
-        employee::class=>employeePolicy::class
+        employee::class=>employeePolicy::class,
+        resturant_food::class=>foodresturantPolicy::class
     ];
 
     /**

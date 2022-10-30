@@ -15,7 +15,7 @@ type Role{
 
     id:ID
     name:String
-    permssion:JSON
+    permssion:[String]
     admins:[Admin] @hasMany
     message:String
 
