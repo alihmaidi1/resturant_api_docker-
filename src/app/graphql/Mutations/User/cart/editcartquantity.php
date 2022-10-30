@@ -1,12 +1,12 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\User\cart;
 
 use App\Exceptions\CustomException;
 use App\Models\cart;
 use App\Models\food;
 
-final class Editcartquantity
+final class editcartquantity
 {
     /**
      * @param  null  $_
@@ -16,7 +16,7 @@ final class Editcartquantity
     {
 
         $cart=cart::find($args["id"]);
-        if($cart->user_id!=auth("user_api")->user()->id){
+        if($cart->user_id!=auth("web")->user()->id){
 
             throw new CustomException(trans("admin.you don't have permssion to do this operation"));
         }else{
@@ -29,6 +29,7 @@ final class Editcartquantity
             $cart->message=trans("admin.the quantity in this cart was updated successfully");
             return $cart;
         }
+
 
     }
 }

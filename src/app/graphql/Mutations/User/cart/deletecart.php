@@ -1,12 +1,11 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\User\cart;
 
 use App\Exceptions\CustomException;
 use App\Models\cart;
-use App\Models\food;
 
-final class Deletecart
+final class deletecart
 {
     /**
      * @param  null  $_
@@ -16,7 +15,7 @@ final class Deletecart
     {
 
         $cart=cart::find($args["id"]);
-        if($cart->user_id!=auth("user_api")->user()->id){
+        if($cart->user_id!=auth("web")->user()->id){
             throw new CustomException(trans("admin.you don't have permssion to do this operation"));
         }else{
 
@@ -27,6 +26,7 @@ final class Deletecart
 
 
         }
+
 
     }
 }

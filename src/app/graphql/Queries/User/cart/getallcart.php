@@ -1,12 +1,12 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\User\cart;
 
 use App\Models\cart;
 use App\Models\food;
 use stdClass;
 
-final class Getallcart
+final class getallcart
 {
     /**
      * @param  null  $_
@@ -15,7 +15,7 @@ final class Getallcart
     public function __invoke($_, array $args)
     {
 
-        $carts=cart::where("user_id",auth("user_api")->user()->id)->get();
+        $carts=cart::where("user_id",auth("web")->user()->id)->get();
         $arr=[];
         foreach($carts as $cart){
             $obj=new stdClass();
@@ -28,5 +28,7 @@ final class Getallcart
 
 
         return $arr;
+
+
     }
 }

@@ -194,6 +194,7 @@ return [
             "App\\GraphQL\\Queries\\user\\account",
             "App\\GraphQL\\Queries\\user\\suggest",
             "App\\GraphQL\\Queries\\user\\wishlist",
+            "App\\GraphQL\\Queries\\user\\cart",
 
 
 
@@ -238,7 +239,7 @@ return [
             "App\\GraphQL\\Mutations\\user\\account",
             "App\\GraphQL\\Mutations\\user\\suggest",
             "App\\GraphQL\\Mutations\\user\\wishlist",
-
+            "App\\GraphQL\\Mutations\\user\\cart",
 
 
 
