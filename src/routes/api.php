@@ -9,7 +9,7 @@ Route::group(["prefix"=>"user"],function(){
 
     Route::get("changepassword/{token}",[Account::class,"changeuserpassword"])->middleware("authJWT");
 
-    Route::post("/checkToken",[Account::class,"checkusertoken"])->middleware("auth:user_api");
+    // Route::post("/checkToken",[Account::class,"checkusertoken"])->middleware("auth:user_api");
 
 
 

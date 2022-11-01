@@ -25,9 +25,7 @@ final class login
             return $admin;
 
             }else{
-
                 throw new CustomException(trans("admin.The Email Or Password Is Not Correct"));
-
             }
 
 

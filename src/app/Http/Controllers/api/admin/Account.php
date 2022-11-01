@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers\api\admin;
+
+use App\Exceptions\CustomException;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\api\admin\account\changepassword as changepasswordRequest;
 use App\Models\message;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Account extends Controller
 {
@@ -66,20 +70,32 @@ class Account extends Controller
     }
 
 
-    public function checkusertoken(Request $request){
 
-        $user=auth('user_api')->user();
-        return $user;
+    public function checkToken(Request $request){
 
-    }
+        $admin=$request->user("api");
+        if($admin!=null){
+
+            $admin->type=1;
+            return $admin;
+        }
+
+        $user=$request->user("web");
+        if($user!=null){
+
+            $user->type=2;
+            return $user;
+
+        }
 
 
-    public function checkAdminToken(Request$request){
+            throw new Exception("token invalid",401);
 
 
-        $admin=auth("api")->user();
 
-        return $admin;
+
+
+
 
     }
 

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreign("table_id")->references("id")->on("tables")->onDelete("cascade")->onUpdate("cascade");
             $table->boolean("status");
             $table->string("name");
+            // $table->string();
             $table->timestamp("start");
             $table->timestamp("end");
             $table->timestamps();

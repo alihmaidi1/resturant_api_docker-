@@ -69,18 +69,13 @@ use Illuminate\Support\Facades\Route;
 
 
     function refreshToken($refreshToken,$provider="admins"){
-
-
         $client=DB::table('oauth_clients')->where("provider",$provider)->first();
         return  Http::asForm()->post(env("APP_URL")."/oauth/token",[
             'grant_type' => 'refresh_token',
             'refresh_token' => $refreshToken,
             'client_id' => $client->id,
             'client_secret' => $client->secret,
-
         ]);
-
-
     }
 
 

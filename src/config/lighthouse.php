@@ -195,6 +195,7 @@ return [
             "App\\GraphQL\\Queries\\user\\suggest",
             "App\\GraphQL\\Queries\\user\\wishlist",
             "App\\GraphQL\\Queries\\user\\cart",
+            "App\\GraphQL\\Queries\\reservation",
 
 
 
@@ -240,6 +241,7 @@ return [
             "App\\GraphQL\\Mutations\\user\\suggest",
             "App\\GraphQL\\Mutations\\user\\wishlist",
             "App\\GraphQL\\Mutations\\user\\cart",
+            "App\\GraphQL\\Mutations\\reservation",
 
 
 
@@ -251,7 +253,28 @@ return [
         'unions' => 'App\\GraphQL\\Unions',
         'scalars' => 'App\\GraphQL\\Scalars',
         'directives' => ['App\\GraphQL\\Directives'],
-        'validators' => ['App\\GraphQL\\Validators'],
+
+        'validators' => [
+
+            'App\\GraphQL\\Validators\\admin\\account',
+            'App\\GraphQL\\Validators\\admin\\banner',
+            'App\\GraphQL\\Validators\\admin\\category',
+
+
+
+
+
+
+
+
+
+
+
+
+            'App\\GraphQL\\Validators',
+
+
+        ],
     ],
 
     /*

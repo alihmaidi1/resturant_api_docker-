@@ -15,7 +15,6 @@ final class resetemail
      */
     public function __invoke($_, array $args)
     {
-
         $admin=admin::where("email",$args['email'])->first();
         $token=auth("reset_password")->login($admin);
         $number=rand(100000,999999);
@@ -26,7 +25,6 @@ final class resetemail
         $messages->message=trans("admin.the Email Was Send To You Successfully");
         $messages->token=$token;
         return $messages;
-
 
     }
 }
