@@ -1,6 +1,6 @@
 const axios = require("axios");
 module.exports = (socket, next) => {
-    let token = socket.handshake.query.token;
+    let token = socket.handshake.headers.token;
     axios.post(process.env.LARAVEL_SERVER + "/api" + "/checkToken", undefined, {
 
         headers: {

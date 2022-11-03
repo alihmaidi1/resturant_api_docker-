@@ -1,23 +1,23 @@
-const Joi = require("joi");
-const resturantModel = require("../models/resturant");
+let joi = require("joi");
 
-const checkResturantId = async(id) => {
+exports.validation = async(data) => {
 
+    let schema = joi.object({
 
-    const count = await resturantModel.getResturantCountById(id);
-    if (count == 0) {
+        message: joi.string().required(),
+        resturant_id: joi.number().required()
 
-        throw new Error("User Is Not Exists In Our Database ");
+    });
+    try {
 
+        await schema.validateAsync(data);
+        return true;
+
+    } catch (error) {
+
+        console.log(error.message)
+        return false;
     }
 
 
-
 }
-
-module.exports = Joi.object({
-
-    message: Joi.string().required(),
-    resturantId: Joi.number().external(checkResturantId).required()
-
-});

@@ -3,10 +3,10 @@ const db = require("../util/database");
 class User {
 
 
-    getCountUserById(id) {
+    async getCountUserById(id) {
 
         let count;
-        return db.execute(`SELECT COUNT(id) as countid from users WHERE id=${id}`).then((res) => {
+        return await db.execute(`SELECT COUNT(id) as countid from users WHERE id=${id}`).then((res) => {
 
             count = res[0].countid;
             return count;

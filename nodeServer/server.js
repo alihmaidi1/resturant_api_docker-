@@ -8,6 +8,7 @@ class Server {
     constructor() {
 
         this.app = express();
+        this.app.use(express.json())
         this.port = process.env.APP_PORT;
         this.host = process.env.APP_HOST;
         this.http = http.createServer(this.app);

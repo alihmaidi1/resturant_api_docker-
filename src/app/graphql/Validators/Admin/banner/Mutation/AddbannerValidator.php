@@ -14,15 +14,14 @@ final class AddbannerValidator extends Validator
     public function rules(): array
     {
         return [
-
             "logo"=>["required","mimes:png,jpg,jpeg"],
             "status"=>["required"],
             "rank"=>["required","unique:banners,rank"],
             "url"=>["required","url"],
             "where_show"=>["required"]
-
         ];
     }
+
 
     public function messages(): array
     {
@@ -40,4 +39,6 @@ final class AddbannerValidator extends Validator
 
         ];
     }
+
+
 }

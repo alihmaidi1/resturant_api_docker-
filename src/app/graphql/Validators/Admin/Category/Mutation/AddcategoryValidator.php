@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Validators\Admin\Category\Mutation;
+namespace App\GraphQL\Validators\Admin\category\mutation;
 
 use Nuwave\Lighthouse\Validation\Validator;
 
@@ -27,8 +27,11 @@ final class AddcategoryValidator extends Validator
             "meta_logo"=>["required","mimes:png,jpg,jpeg"],
             "keywords"=>["required"],
             "status"=>["required"]
+
         ];
     }
+
+
     public function messages(): array
     {
         return [
@@ -50,4 +53,5 @@ final class AddcategoryValidator extends Validator
 
         ];
     }
+
 }

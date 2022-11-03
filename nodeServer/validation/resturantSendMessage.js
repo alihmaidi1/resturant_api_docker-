@@ -1,19 +1,23 @@
-const Joi = require("joi");
-const userModel = require("../models/user");
-const checkUserId = async(id) => {
+let joi = require("joi");
 
-    const count = await userModel.getCountUserById(id);
-    if (count == 0) {
+exports.validation = async(data) => {
 
-        throw new Error("User Is Not Exists In Our Database ");
+    let schema = joi.object({
 
+        message: joi.string().required(),
+        user_id: joi.number().required()
+
+    });
+    try {
+
+        await schema.validateAsync(data);
+        return true;
+
+    } catch (error) {
+
+        console.log(error.message)
+        return false;
     }
 
+
 }
-
-module.exports = Joi.object({
-
-    userId: Joi.number().external(checkUserId).required(),
-    message: Joi.string().required()
-
-});
