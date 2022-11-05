@@ -259,6 +259,8 @@ return [
     "this role for super admin"=>"this role for super admin",
     "storehouse id is required"=>"storehouse id is required",
     "storehouse id is not exists in our data"=>"storehouse id is not exists in our data",
+    "day field is required"=>"day field is required",
+    "day field should be date"=>"day field should be date",
 
 
 

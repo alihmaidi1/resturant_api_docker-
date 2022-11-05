@@ -29,7 +29,8 @@ final class addreservation
                     "name"=>$args["name"],
                     "status"=>0,
                     "start"=>$args["start"],
-                    "end"=>$args["end"]
+                    "end"=>$args["end"],
+                    "user_id"=>auth("web")->user()->id
                 ]);
                 $total=getTotalPrice($args["start"],$args["end"],$reservation->table->type->price);
                 $reservation->price=$total;

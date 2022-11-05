@@ -10,7 +10,7 @@ class reservation extends Model
     use HasFactory;
 
 
-    public $fillable=["code","table_id","name","status","start","end"];
+    public $fillable=["code","table_id","name","status","start","end","user_id"];
 
     public $hidden=["created_at","updated_at"];
 
@@ -20,5 +20,9 @@ class reservation extends Model
     }
 
 
+    public function user(){
+
+        return $this->belongsTo("App\Models\user","user_id");
+    }
 
 }

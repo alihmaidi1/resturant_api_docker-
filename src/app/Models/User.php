@@ -63,4 +63,8 @@ class User extends Authenticatable  implements JWTSubject
     }
 
 
+    public function reservations(){
+
+        return $this->hasMany("App\Models\\reservation","user_id");
+    }
 }

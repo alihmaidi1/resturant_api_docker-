@@ -1,16 +1,16 @@
 extend type Mutation{
 
-    addreservation(table_id:ID,name:String,start:String,end:String): reservation @validator
-    editreservation(id:ID,name:String,start:String,end:String,table_id:Int): reservation @validator
-    editnamereservtion(id:ID,name:String):reservation @validator
-    deletereservation(id:ID):reservation @validator
+    addreservation(table_id:ID,name:String,start:String,end:String): reservation @guard(with:"web") @validator
+    editreservation(id:ID,name:String,start:String,end:String,table_id:Int): reservation @guard(with:"web") @validator
+    deletereservation(id:ID):reservation @validator @guard(with:"web")
 }
 
 extend type Query{
 
 
-    getreservation(code:String,name:String):reservation @validator
-
+    getreservation(code:String):reservation @guard(with:"web") @validator
+    getreservationbyid(id:ID):reservation  @guard(with:"web") @validator
+    getreservationinday(table_id:ID,day:String):[reservation] @validator
 }
 
 
@@ -27,6 +27,6 @@ type reservation{
     currency: Currency
     price:Float
     paymentUrl: String
-
+    user:User @belongsTo
 
 }

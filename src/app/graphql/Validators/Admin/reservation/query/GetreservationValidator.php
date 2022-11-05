@@ -15,7 +15,6 @@ final class GetreservationValidator extends Validator
     {
         return [
 
-            "name"=>["required"],
             "code"=>["required"]
 
         ];
@@ -26,7 +25,6 @@ final class GetreservationValidator extends Validator
     {
         return [
 
-            "name.required"=>trans("admin.name is required"),
             "code.required"=>trans("admin.code is required")
 
         ];

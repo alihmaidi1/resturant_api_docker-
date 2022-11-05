@@ -67,9 +67,10 @@ class AuthServiceProvider extends ServiceProvider
 
         }
 
-        Gate::define("userverified",function(){
+        Gate::define("verifiedaccount",function(){
 
-            return true;
+                return true;
+
         });
 
 
@@ -79,4 +80,5 @@ class AuthServiceProvider extends ServiceProvider
 
         //
     }
+
 }

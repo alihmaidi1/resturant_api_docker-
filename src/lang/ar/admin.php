@@ -258,7 +258,10 @@ return [
     "the admin was updated successfully"=>"تم تعديل الادمن بنجاح",
     "this role for super admin"=>"هذه الصلاحية لأدمن بتحكم كامل",
     "storehouse id is required"=>"معرف المخزن مطلوب",
-    "storehouse id is not exists in our data"=>"معرف المخزن غير موجود ضمن بياناتنا"
+    "storehouse id is not exists in our data"=>"معرف المخزن غير موجود ضمن بياناتنا",
+    "day field is required"=>"حقل اليوم مطلوب" ,
+    "day field should be date"=>"حقل اليوم يجب أن يكون من نوع تاريخ",
+
 
 
 

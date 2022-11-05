@@ -4,7 +4,7 @@ extend type Mutation {
     createuser(name:String,email:String,password:String):User @validator
     verifiedaccount(code:String): Message12 @validator @guard(with:["web"])
     refreshtokenuser(your_refresh_token:String): Token
-    edituserprofile(name:String,copon_notification:Int): User @validator @guard(with:["web"])
+    edituserprofile(name:String,copon_notification:Int): User @validator @guard(with:["web"]) @can(ability:"verifiedaccount")
     loginuser(email:String,password:String):User @validator
     logoutuser:User @guard(with:["web"])
     sendmailuser(email:String):Message12 @validator
@@ -28,7 +28,7 @@ type User{
     token_info: Token
     suggests: Suggest @hasMany
     chats: [Chat] @hasMany
-
+    reservations:[reservation] @hasMany
 }
 type Message12{
 
