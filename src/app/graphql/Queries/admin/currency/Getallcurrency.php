@@ -1,7 +1,9 @@
 <?php
 
-namespace App\GraphQL\Queries;
-use \App\Models\currency;
+namespace App\GraphQL\Queries\Admin\currency;
+
+use App\Models\currency;
+
 final class Getallcurrency
 {
     /**
@@ -21,5 +23,7 @@ final class Getallcurrency
         }
 
         return $arr;
+
+
     }
 }

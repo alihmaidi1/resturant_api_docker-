@@ -1,7 +1,9 @@
 <?php
 
-namespace App\GraphQL\Queries;
-use \App\Models\tabletype;
+namespace App\GraphQL\Queries\Admin\tabletype;
+
+use App\Models\tabletype;
+
 final class Getalltabletype
 {
     /**
@@ -10,6 +12,7 @@ final class Getalltabletype
      */
     public function __invoke($_, array $args)
     {
+
 
         $tabletypes=tabletype::all();
         $arr=[];
@@ -21,6 +24,7 @@ final class Getalltabletype
 
         }
         return $arr;
+
 
     }
 }

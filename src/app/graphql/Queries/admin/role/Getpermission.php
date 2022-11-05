@@ -1,15 +1,19 @@
 <?php
 
-namespace App\GraphQL\Queries;
-use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
+namespace App\GraphQL\Queries\Admin\role;
+
 use Illuminate\Support\Facades\Config;
 use stdClass;
 
 final class Getpermission
 {
-
-    public function __invoke($_, array $args,GraphQLContext $context)
+    /**
+     * @param  null  $_
+     * @param  array{}  $args
+     */
+    public function __invoke($_, array $args)
     {
+
 
         $arr=config("global.permssion");
         $keys=[];
@@ -22,5 +26,8 @@ final class Getpermission
         $val->key=$keys;
         $val->value=$values;
         return $val;
+
+
+
     }
 }

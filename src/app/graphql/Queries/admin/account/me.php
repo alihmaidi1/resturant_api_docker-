@@ -1,8 +1,8 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Queries\Admin\account;
 
-final class Me
+final class me
 {
     /**
      * @param  null  $_
@@ -11,10 +11,11 @@ final class Me
     public function __invoke($_, array $args)
     {
 
+
         $auth=auth("api")->user();
-        $auth->role;
-        $auth->resturant;
+
         $auth->message=trans("admin.The profile info was fetched successfully");
         return $auth;
+
     }
 }

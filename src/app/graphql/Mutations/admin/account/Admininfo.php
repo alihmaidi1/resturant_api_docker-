@@ -1,7 +1,9 @@
 <?php
 
-namespace App\GraphQL\Mutations;
+namespace App\GraphQL\Mutations\Admin\account;
+
 use App\Models\admin;
+
 final class Admininfo
 {
     /**
@@ -12,9 +14,11 @@ final class Admininfo
     {
 
         $admin=admin::find($args['id']);
-        $admin->role;
-        $admin->employee;
+
         $admin->message=trans("admin.the data was feteched successfully");
         return $admin;
+
+
+
     }
 }

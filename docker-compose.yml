@@ -1,10 +1,8 @@
 version: '3'
-
 networks:
   laravel:
     driver: bridge
 services:
-
 
   mysql:
     image: mysql:8
